@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper連結 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- icon連結 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css 連結 -->
+    <link rel="stylesheet" href="../style.css">
+    <title>SEETY - 演出資訊</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>展演資訊</h1>
+        <div class="cards-container">
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {%EXHIBITION_CARDS%}
+                    </div>
+                </div>
+                <!-- <section id="month-hit"></section>
+            <section id="future-event"></section>
+            <section id="event-review"></section> -->
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- JS連結
+    <script src="../index.js"></script> -->
+    <!-- swiper連結 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
