@@ -1,7 +1,275 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #000;
+}
+
+:root {
+    --web-side-padding-y: 80px;
+    --web-side-padding-x: 200px;
+    --main-decorate-color: #F7C972;
+    --main-bg-color: #777777;
+    --card-sub-color: #EAEAEA;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 var(--web-side-padding-x);
+    background-color: var(--main-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+}
+
+nav li {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    outline: 3px solid var(--main-decorate-color);
+    padding: 10px 16px;
+}
+
+
+
+/* main */
+.section-content {
+    width: 100%;
+    height: 100%;
+    padding: var(--web-side-padding-y) var(--web-side-padding-x);
+    border-top: 1px solid var(--main-bg-color);
+
+    /* test */
+    /* border: 1px solid #000; */
+}
+
+.section-title {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px var(--main-bg-color);
+    color: transparent;
+    margin-bottom: 80px;
+    letter-spacing: 3px;
+}
+
+
+
+/* #performance-information {
+    height: 100vh;
+} */
+
+#performance-information .section-title {
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+}
+
+#performance-information .section-title h1:nth-child(2) {
+    align-self: end;
+}
+
+.performance-information-cards {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.performance-information-card {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    user-select: none;
+    cursor: pointer;
+}
+
+.performance-information-card img {
+    width: 90%;
+}
+
+.performance-information-card span {
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 1 / 0.9;
+    background-color: var(--card-sub-color);
+    position: absolute;
+    left: 0;
+    top: 10%;
+    z-index: -1;
+}
+
+.performance-information-card small {
+    font-size: 1.25vw;
+    font-weight: 600;
+    text-transform: capitalize;
+    align-self: flex-end;
+    margin-right: 40px;
+    line-height: 2.5rem;
+}
+
+
+
+#performance-information .swiper {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+#performance-information .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#performance-information .swiper-pagination {
+    position: relative;
+    bottom: -50px;
+}
+
+
+
+/* #living-room {
+    height: 100vh;
+} */
+
+#living-room .rooms {
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    position: relative;
+}
+
+#living-room .room {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    gap: 3rem;
+}
+
+#living-room .big-room {
+    align-self: flex-end;
+}
+
+#living-room .big-room img {
+    order: 2;
+}
+
+#living-room .room img {
+    width: 100%;
+}
+
+#living-room .room article {
+    display: flex;
+    flex-flow: column;
+}
+
+#living-room .room article h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#living-room .big-room article :is(h3 , p) {
+    text-align: end;
+}
+
+#living-room .room article p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#living-room .room article .btns {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#living-room .room article button {
+    font-size: 1.5rem;
+}
+
+#contact-information {
+    height: 100vh;
+    background-image: url('../../img/網頁大小版面.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+
+#contact-information .section-content {
+    padding: 180px 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-information .info{
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-left: 10rem;
+}
+
+#contact-information .info >*{
+    line-height: 2.5rem;
 }

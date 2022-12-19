@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper連結 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- icon連結 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css 連結 -->
     <link rel="stylesheet" href="./style.css">
     <title>SEETY新城視</title>
@@ -12,14 +18,204 @@
 
 <body>
     <header>
-        <section class="banner"></section>
-        <nav></nav>
+        <section class="banner">
+        </section>
     </header>
-    <main></main>
-    <footer></footer>
+    <nav>
+        <ul>
+            <a href="#about-seety">
+                <li>關於SEETY</li>
+            </a>
+            <a href="#performance-information">
+                <li>展演資訊</li>
+            </a>
+            <a href="#living-room">
+                <li>場館介紹/租借方案</li>
+            </a>
+            <a href="#living-room">
+                <li>設備概覽</li>
+            </a>
+            <a href="#contact-information">
+                <li>聯絡我們</li>
+            </a>
+            <a href="">
+                <li>SEETY BLOG</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <section id="about-seety">
+            <div class="section-content">
+                <article class="section-title">
+                    <h1>About SEETY</h1>
+                </article>
+            </div>
+        </section>
 
+        <section id="performance-information">
+            <div class="section-content">
+                <article class="section-title">
+                    <h1>Performance</h1>
+                    <h1>Information</h1>
+                </article>
+                <article class="performance-information-cards">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/1.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/2.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/3.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/4.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/5.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/show/6.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="living-room">
+            <div class="section-content">
+                <article class="section-title">
+                    <h1>Living room</h1>
+                </article>
+                <div class="rooms">
+                    <section class="room small-room">
+                        <img src="../../img/place/新城視-場館介紹-1.png" alt="">
+                        <article>
+                            <h3>小客廳</h3>
+                            <p>
+                                小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，
+                            </p>
+                            <div class="btns">
+                                <button>詳細介紹</button>
+                                <button>器材概覽</button>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="room big-room">
+                        <img src="../../img/place/新城視-場館介紹-2.png" alt="">
+                        <article>
+                            <h3>大舞廳</h3>
+                            <p>
+                                大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，
+                            </p>
+                            <div class="btns">
+                                <button>詳細介紹</button>
+                                <button>器材概覽</button>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="contact-information">
+            <div class="section-content">
+                <section>
+                    <article class="section-title">
+                        <h1>Contact information</h1>
+                    </article>
+                    <article class="info">
+                        <div class="phone">
+                            <h2>連絡電話</h2>
+                            <h3>0910-203 694</h3>
+                        </div>
+                        <address>
+                            <h2>地址</h2>
+                            <h3>台南市中西區民族路三段190號
+                                B1-2</h3>
+                        </address>
+                        <div class="open-time">
+                            <h2>營業時間</h2>
+                            <h3>周一至周五 1000-1730 <br>
+                                周六周日休息</h3>
+                        </div>
+                    </article>
+                </section>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.670055753884!2d120.19296354882262!3d22.99915733407257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc836756906e41b41!2zU2VldHnmlrDln47oppYg5bGV5ryU56m66ZaT!5e0!3m2!1szh-TW!2stw!4v1671429405675!5m2!1szh-TW!2stw"
+                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <!-- swiper連結 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
     <!-- JS連結 -->
     <script src="./script.js"></script>
+
 </body>
 
 </html>
