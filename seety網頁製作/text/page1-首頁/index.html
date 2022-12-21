@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SEETY新城視</title>
     <!-- css 連結 -->
     <link rel="stylesheet" href="./style.css">
-    <title>SEETY新城視</title>
 </head>
 
 <body>
@@ -51,6 +51,7 @@
     </nav>
     <main>
         <section id="about-seety">
+            <img class="background-image" src="/seety網頁製作/img/網頁大小版面-01.png" alt="">
             <div class="section-content">
                 <article class="section-title">
                     <h1>
@@ -60,6 +61,7 @@
                     </h1>
                 </article>
             </div>
+            <img class="decorate-cloud" src="/seety網頁製作/img/大雲.png" alt="">
         </section>
 
         <section id="performance-information">
@@ -206,13 +208,11 @@
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.670055753884!2d120.19296354882262!3d22.99915733407257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc836756906e41b41!2zU2VldHnmlrDln47oppYg5bGV5ryU56m66ZaT!5e0!3m2!1szh-TW!2stw!4v1671429405675!5m2!1szh-TW!2stw"
-                        
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
-        <img src="/seety網頁製作/img/icon/FB-ICON.svg" alt="">
     </footer>
 
 
@@ -221,13 +221,22 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
         });
+
     </script>
     <!-- JS連結 -->
     <script src="./script.js"></script>
