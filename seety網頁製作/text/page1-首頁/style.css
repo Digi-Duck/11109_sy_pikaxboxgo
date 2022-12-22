@@ -33,8 +33,8 @@ p {
 :root {
     --web-side-padding-y: 80px;
     --web-side-padding-x: 200px;
-    --main-decorate-color: #F7C972;
-    --main-bg-color: #777777;
+    --main-decorate-color: #C78763;
+    --main-bg-color: #3D342E;
     --card-sub-color: #EAEAEA;
 }
 
@@ -45,7 +45,7 @@ body {
 
 
 
-#svgPic{
+#svgPic {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -58,7 +58,7 @@ body {
     transition: 3s;
 }
 
-#svgPic.unshow{
+#svgPic.unshow {
     transform: translateY(-100%);
     opacity: 0.1;
 }
@@ -76,16 +76,27 @@ header {
 .banner {
     width: 100%;
     height: 100%;
-    background-image: url('../../img/banner.jpg');
+    background-image: url('../../img/更新的檔/banner\ background.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center -94px;
     background-attachment: fixed;
     overflow: hidden;
+    position: relative;
 }
 
-.banner img {
-    opacity: 0.2;
+.banner .logo {
+    /* width: 30%; */
+    position: absolute;
+    right: 25%;
+    bottom: 250px;
+    transform: translate(49%, 33%);
+    width: 532px;
+    height: 296px;
+}
+
+.banner .logo img {
+    width: 100%;
 }
 
 nav {
@@ -93,7 +104,7 @@ nav {
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     padding: 0 var(--web-side-padding-x);
     background-color: var(--main-bg-color);
     position: sticky;
@@ -104,20 +115,20 @@ nav {
 nav .list {
     display: flex;
     gap: 1rem;
-
 }
 
 nav ul {
     display: flex;
     gap: 1rem;
-    justify-content: end;
 }
 
 nav li {
     font-size: 1.5vw;
+    font-weight: 700;
     line-height: 1.5vw;
-    border: 3px solid var(--main-decorate-color);
+    background-color: var(--main-decorate-color);
     padding: 10px 16px;
+    border-radius: 15px;
 }
 
 nav .more {
@@ -141,8 +152,7 @@ nav .more {
 
 .section-title {
     font-size: 3rem;
-    -webkit-text-stroke: 2px var(--main-bg-color);
-    color: transparent;
+    color: var(--card-sub-color);
     margin-bottom: var(--web-side-padding-y);
     transform: translateX(-200px);
     opacity: 0;
@@ -156,30 +166,30 @@ nav .more {
     filter: blur(0);
 }
 
-#about-seety{
+#about-seety {
+    background-image: url('../../img/更新的檔/01-about/background.png');
+    background-size: cover;
     height: 100vh;
     position: relative;
-    background: linear-gradient(135deg, #2d1414e3, #2b0f0f57);
+    /* background: linear-gradient(135deg, #2d1414e3, #2b0f0f57); */
 }
 
-#about-seety .background-image{
-    width: 100%;
+#about-seety .background-image {
+    width: 1903px;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    /* mix-blend-mode: multiply; */
 }
 
-#about-seety .decorate-cloud{
+#about-seety .decorate-cloud {
     width: 45%;
-    min-width: 600px;
+    min-width: 500px;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 2;
+    opacity: 0.3;
 }
-
-
-
 
 
 
@@ -362,6 +372,7 @@ nav .more {
     position: relative;
     padding: 8% 10%;
 }
+
 #contact-information>img {
     width: 90%;
     height: 90%;
@@ -459,9 +470,11 @@ nav .more {
     #living-room .room img {
         object-fit: cover;
     }
-    #contact-information{
+
+    #contact-information {
         padding: 20% 10%;
     }
+
     #contact-information .section-content {
         display: flex;
         flex-flow: column;

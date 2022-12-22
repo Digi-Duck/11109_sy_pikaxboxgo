@@ -30,37 +30,37 @@ titles.forEach(title => {
         observer.observe(title);
 })
 
-const paths = document.querySelectorAll('#svgPic path')
+// const paths = document.querySelectorAll('#svgPic path')
 
-for (let i = 0; i < paths.length; i++) {
-        let pL = paths[i].getTotalLength();
-        paths[i].style.strokeDasharray = pL;
-        paths[i].style.strokeDashoffset = pL;
+// for (let i = 0; i < paths.length; i++) {
+//         let pL = paths[i].getTotalLength();
+//         paths[i].style.strokeDasharray = pL;
+//         paths[i].style.strokeDashoffset = pL;
 
-        setTimeout(() => {
-                paths[i].style.transition = `stroke-dashoffset 1.5s linear ${1 * i}s , 
-        fill .5s linear ${1 * i}s
-        `
-                paths[i].style.strokeDashoffset = pL + pL;
-                setTimeout(() => {
-                        paths[i].setAttribute('fill', '#000')
-                }, 1500);
-        }, 100);
-}
+//         setTimeout(() => {
+//                 paths[i].style.transition = `stroke-dashoffset 1.5s linear ${1 * i}s , 
+//         fill .5s linear ${1 * i}s
+//         `
+//                 paths[i].style.strokeDashoffset = pL + pL;
+//                 setTimeout(() => {
+//                         paths[i].setAttribute('fill', '#000')
+//                 }, 1500);
+//         }, 100);
+// }
 
-const html = document.querySelector('html')
-const loadingPage = document.querySelector('#svgPic')
-window.onload = () => {
-        setTimeout(() => {
-                loadingPage.classList.add('unshow')
-                window.scrollTo({
-                        top:"0",
-                        behavior:"auto",
-                });
-                html.style.scrollBehavior = "smooth"
-                setTimeout(() => {
-                        loadingPage.style.display = "none";
-                }, 3000);
-        }, 8000);
+// const html = document.querySelector('html')
+// const loadingPage = document.querySelector('#svgPic')
+// window.onload = () => {
+//         setTimeout(() => {
+//                 loadingPage.classList.add('unshow')
+//                 window.scrollTo({
+//                         top:"0",
+//                         behavior:"auto",
+//                 });
+//                 html.style.scrollBehavior = "smooth"
+//                 setTimeout(() => {
+//                         loadingPage.style.display = "none";
+//                 }, 3000);
+//         }, 8000);
 
-}
+// }
