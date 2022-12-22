@@ -5,7 +5,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 a {
@@ -45,9 +45,23 @@ body {
 
 
 
+#svgPic{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    z-index: 100;
+    background-color: #fff;
+    transition: 3s;
+}
 
-
-
+#svgPic.unshow{
+    transform: translateY(-100%);
+    opacity: 0.1;
+}
 
 
 /* header */
@@ -145,6 +159,7 @@ nav .more {
 #about-seety{
     height: 100vh;
     position: relative;
+    background: linear-gradient(135deg, #2d1414e3, #2b0f0f57);
 }
 
 #about-seety .background-image{
@@ -347,7 +362,6 @@ nav .more {
     position: relative;
     padding: 8% 10%;
 }
-
 #contact-information>img {
     width: 90%;
     height: 90%;

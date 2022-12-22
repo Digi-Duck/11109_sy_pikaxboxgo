@@ -1,7 +1,281 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
+
+a {
+    color: #000;
+}
+
+:root {
+    --web-side-padding-y: 80px;
+    --web-side-padding-x: 200px;
+    --main-decorate-color: #F7C972;
+    --main-bg-color: #777777;
+    --card-sub-color: #EAEAEA;
+}
+
+body {
+    perspective: 500px;
+    /* overflow: hidden; */
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 var(--web-side-padding-x);
+    background-color: var(--main-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav .list {
+    display: flex;
+    gap: 1rem;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+}
+
+nav li {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    border: 3px solid var(--main-decorate-color);
+    padding: 10px 16px;
+}
+
+nav .more {
+    display: none;
+}
+
+.room {
+    width: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+.room .room-background {
+    width: 110%;
+    position: relative;
+    left: -5%;
+    z-index: -1;
+}
+
+.room div img {
+    width: 100%;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+}
+
+.ins-content {
+    position: relative;
+}
+
+.bass {
+    width: 16.5%;
+    position: absolute;
+    inset: 12.5vw 0 0 14%;
+}
+
+.mic {
+    width: 8.5%;
+    position: absolute;
+    inset: 9vw 0 0 30.5%;
+}
+
+.drum {
+    width: 28%;
+    position: absolute;
+    inset: 4.5vw 0 0 36.5%;
+}
+
+.eg {
+    width: 17.5%;
+    position: absolute;
+    inset: 13.5vw 0 0 64%;
+}
+
+.room div:hover :is(img, .info) {
+    opacity: 1;
+}
+
+.room .info-content {
+    background-color: var(--card-sub-color);
+    display: inline-block;
+    padding: 1.5rem 2rem 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.bass .info {
+    position: absolute;
+    inset: -40% auto auto -50%;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+}
+
+.bass .info::before {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background-color: var(--card-sub-color);
+    position: absolute;
+    top: 100%;
+    left: 2rem;
+}
+
+.bass .info::after {
+    content: '';
+    width: 1px;
+    height: 120px;
+    background-color: var(--card-sub-color);
+    transform: rotate(-60deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: calc(100% + 40px);
+    left: 2rem;
+}
+
+.bass .info-content::after {
+    content: 'BASS';
+    background-color: var(--main-bg-color);
+    color: var(--card-sub-color);
+    position: absolute;
+    inset: -16% auto auto -10%;
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+}
+
+.mic .info {
+    position: absolute;
+    inset: -30% auto auto -180%;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+}
+
+.mic .info::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background-color: var(--card-sub-color);
+    position: absolute;
+    top: 20%;
+    right: -40px;
+}
+
+.mic .info::after {
+    content: '';
+    width: 1px;
+    height: 100px;
+    background-color: var(--card-sub-color);
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 20%;
+    right: -40px;
+}
+
+.mic .info-content::after {
+    content: 'MIC';
+    background-color: var(--main-bg-color);
+    color: var(--card-sub-color);
+    position: absolute;
+    inset: -16% auto auto -10%;
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+}
+
+.drum .info {
+    position: absolute;
+    inset: 0 -60% auto auto;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+}
+
+.drum .info::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background-color: var(--card-sub-color);
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
+
+.drum .info::after {
+    content: '';
+    width: 1px;
+    height: 120px;
+    background-color: var(--card-sub-color);
+    transform: rotate(50deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
+
+.drum .info-content::after {
+    content: 'DRUM';
+    background-color: var(--main-bg-color);
+    color: var(--card-sub-color);
+    position: absolute;
+    inset: -16% auto auto -10%;
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+}
+
+.eg .info {
+    position: absolute;
+    inset: -30% -30% auto auto;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+}
+
+.eg .info::after {
+    content: '';
+    width: 1px;
+    height: 60px;
+    background-color: var(--card-sub-color);
+    transform: rotate(20deg);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+}
+
+.eg .info-content::after {
+    content: 'E.Guitar';
+    background-color: var(--main-bg-color);
+    color: var(--card-sub-color);
+    position: absolute;
+    inset: -16% auto auto -10%;
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+}
+
+.room button {
+    position: absolute;
+    bottom: 3rem;
+    right: 6rem;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    outline: 3px solid var(--card-sub-color);
+    outline-offset: 5px;
+}
+
+
+
