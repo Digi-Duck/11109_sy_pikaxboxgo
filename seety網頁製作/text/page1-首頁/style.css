@@ -34,7 +34,7 @@ p {
   --web-side-padding-y: 80px;
   --web-side-padding-x: 200px;
   --main-decorate-color: #c78763;
-  --sub-decorate-color: #847D7D;
+  --sub-decorate-color: #847d7d;
   --main-bg-color: #3d342e;
   --card-sub-color: #eaeaea;
   --nav-height: 10vh;
@@ -139,6 +139,14 @@ nav .back-to-top {
   position: absolute;
   top: 100%;
   right: 3%;
+  display: none;
+}
+nav .back-to-top.appear {
+  display: block;
+  animation: appear 0.7s ease-out forwards;
+}
+nav .back-to-top.appear:hover {
+  box-shadow: ;
 }
 
 /* main */
@@ -150,7 +158,6 @@ nav .back-to-top {
   /* test */
   /* border: 1px solid #000; */
 }
-
 
 .section-title {
   font-size: 3rem;
@@ -198,7 +205,6 @@ nav .back-to-top {
   gap: 10%;
 }
 
-
 #about-seety .imgSwiper {
   width: 60%;
 }
@@ -214,7 +220,6 @@ nav .back-to-top {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -291,8 +296,6 @@ nav .back-to-top {
   color: #000;
 }
 
-
-
 #performance-information {
   background-image: url('../../img/更新的檔/02-performance/background.png');
   background-size: cover;
@@ -335,8 +338,6 @@ nav .back-to-top {
   font-size: 3rem;
   padding-right: 3rem;
 }
-
-
 
 .performance-information-card {
   width: 450px;
@@ -416,7 +417,7 @@ nav .back-to-top {
   min-height: 100vh;
   /* height: 100vh; */
 }
-#living-room .rooms.mblong{
+#living-room .rooms.mblong {
   margin-bottom: 700px;
 }
 #living-room .rooms {
@@ -438,7 +439,7 @@ nav .back-to-top {
   position: absolute;
   transition: 1s;
 }
-#living-room .big-room.show{
+#living-room .big-room.show {
   transform: translateY(100%);
 }
 #living-room .roomImg {
@@ -496,7 +497,7 @@ nav .back-to-top {
   display: flex;
   gap: 1.5rem;
 }
-#living-room .big-room article .btns{
+#living-room .big-room article .btns {
   justify-content: end;
 }
 #living-room .room article button {
@@ -504,25 +505,22 @@ nav .back-to-top {
   padding: 1% 3%;
 }
 
-#living-room .small-room article p{
+#living-room .small-room article p {
   position: relative;
   left: -80px;
 }
-#living-room .small-room article .btns{
+#living-room .small-room article .btns {
   position: relative;
   left: -180px;
 }
-#living-room .big-room article h3{
+#living-room .big-room article h3 {
   position: relative;
   right: -180px;
 }
-#living-room .big-room article p{
+#living-room .big-room article p {
   position: relative;
   right: -120px;
 }
-
-
-
 
 #contact-information {
   min-height: 100vh;
@@ -550,7 +548,7 @@ nav .back-to-top {
   position: absolute;
 }
 
-#contact-information .section-content>section {
+#contact-information .section-content > section {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -562,7 +560,7 @@ nav .back-to-top {
   gap: 1.5rem;
 }
 
-#contact-information .info>* {
+#contact-information .info > * {
   line-height: 2rem;
 }
 
@@ -571,7 +569,6 @@ nav .back-to-top {
   gap: 2rem;
   transform: translate(-10%, 40%);
 }
-
 
 #contact-information .map {
   width: 100%;
@@ -645,7 +642,7 @@ nav .back-to-top {
     align-items: center;
   }
 
-  #contact-information .section-content> :nth-child(1) {
+  #contact-information .section-content > :nth-child(1) {
     width: 100%;
   }
 
@@ -667,7 +664,7 @@ nav .back-to-top {
     width: 80%;
   }
 
-  #performance-information .section-title+div {
+  #performance-information .section-title + div {
     top: calc(var(--web-side-padding-y) + 70px);
     padding-right: 1.5rem;
   }
@@ -682,7 +679,7 @@ nav .back-to-top {
     width: 70%;
   }
 
-  #performance-information .section-title+div {
+  #performance-information .section-title + div {
     width: 60%;
     height: 30px;
     top: calc(var(--web-side-padding-y) + 70px);
@@ -694,5 +691,32 @@ nav .back-to-top {
     width: 70%;
     display: flex;
     flex-flow: column;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  60% {
+    transform: translateY(-33%);
+  }
+  70% {
+    transform: translateY(-25%);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
