@@ -13,7 +13,7 @@ a {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 h5 {
@@ -34,6 +34,7 @@ p {
   --web-side-padding-y: 80px;
   --web-side-padding-x: 200px;
   --main-decorate-color: #c78763;
+  --sub-decorate-color: #847D7D;
   --main-bg-color: #3d342e;
   --card-sub-color: #eaeaea;
   --nav-height: 10vh;
@@ -74,7 +75,7 @@ header {
 .banner {
   width: 100%;
   height: 100%;
-  background-image: url('../../img/更新的檔/banner\ background.JPG');
+  background-image: url('../../img/更新的檔/00-header/banner\ background.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -94px;
@@ -133,19 +134,23 @@ nav .more {
   display: none;
 }
 
+nav .back-to-top {
+  width: 200px;
+  position: absolute;
+  top: 100%;
+  right: 3%;
+}
+
 /* main */
 .section-content {
   width: 100%;
+  height: 100%;
   padding: var(--web-side-padding-y) var(--web-side-padding-x);
-  border-top: 1px solid var(--main-bg-color);
 
   /* test */
   /* border: 1px solid #000; */
 }
 
-#contact-information .section-content {
-  border: 0;
-}
 
 .section-title {
   font-size: 3rem;
@@ -166,7 +171,7 @@ nav .more {
 #about-seety {
   background-image: url('../../img/更新的檔/01-about/background.png');
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   /* background: linear-gradient(135deg, #2d1414e3, #2b0f0f57); */
 }
@@ -209,7 +214,7 @@ nav .more {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  
+
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -245,10 +250,12 @@ nav .more {
   justify-content: space-between;
   padding: 5rem 0;
 }
-#about-seety .container p{
+
+#about-seety .container p {
   font-size: 2rem;
   line-height: 4rem;
 }
+
 #about-seety .controller {
   border-top: 5px solid var(--main-decorate-color);
   border-bottom: 5px solid var(--main-decorate-color);
@@ -259,23 +266,23 @@ nav .more {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  color: var(--main-bg-color);
+  color: var(--sub-decorate-color);
   position: relative;
 }
 
-.swiper-button-next.abSwiper::after{
+.swiper-button-next.abSwiper::after {
   content: '';
 }
-.swiper-button-prev.abSwiper::after{
+
+.swiper-button-prev.abSwiper::after {
   content: '';
 }
-#about-seety .swiper-pagination.abSwiper{
-  width: 50px;
-}
-#about-seety .fa-play{
+
+#about-seety .fa-play {
   color: var(--main-decorate-color);
 }
-#about-seety .controller::before{
+
+#about-seety .controller::before {
   content: 'Click !';
   font-size: 2rem;
   position: absolute;
@@ -287,36 +294,49 @@ nav .more {
 
 
 #performance-information {
+  background-image: url('../../img/更新的檔/02-performance/background.png');
+  background-size: cover;
+  min-height: 100vh;
   position: relative;
 }
 
 #performance-information .section-title {
-  width: 450px;
   display: flex;
-  flex-flow: column;
-  background-color: #fff;
-  position: relative;
-  padding-right: 2rem;
+  align-items: flex-end;
 }
 
-#performance-information .section-title+div {
-  width: 80%;
+#performance-information .section-title h1 {
+  display: flex;
+  flex-flow: column;
+  width: 800px;
+  margin-right: 10%;
+}
+
+#performance-information .section-title h1 span:last-child {
+  text-align: end;
+}
+
+#performance-information .section-title h1::after {
+  content: '';
+  width: 140%;
+  height: 20px;
+  background-color: var(--main-decorate-color);
+  border-radius: 8px;
+}
+
+#performance-information .section-title div {
+  width: 100%;
   height: 50px;
-  background-color: var(--main-bg-color);
-  position: absolute;
-  top: calc(var(--web-side-padding-y) + 120px);
-  z-index: -1;
+  background-color: var(--main-decorate-color);
   border-radius: 8px;
   color: var(--card-sub-color);
   text-align: end;
   line-height: 50px;
-  font-size: 2rem;
+  font-size: 3rem;
   padding-right: 3rem;
 }
 
-#performance-information .section-title h1:nth-child(2) {
-  align-self: end;
-}
+
 
 .performance-information-card {
   width: 450px;
@@ -336,7 +356,7 @@ nav .more {
   display: inline-block;
   width: 100%;
   aspect-ratio: 1 / 0.9;
-  background-color: var(--card-sub-color);
+  background-color: var(--sub-decorate-color);
   position: absolute;
   left: 0;
   top: 10%;
@@ -360,7 +380,6 @@ nav .more {
 #performance-information .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -391,7 +410,17 @@ nav .more {
   mix-blend-mode: multiply;
 }
 
+#living-room {
+  background-image: url('../../img/更新的檔/03-room/background.png');
+  background-size: cover;
+  min-height: 100vh;
+  /* height: 100vh; */
+}
+#living-room .rooms.mblong{
+  margin-bottom: 700px;
+}
 #living-room .rooms {
+  height: 100%;
   display: flex;
   flex-flow: column;
   gap: 3rem;
@@ -400,33 +429,57 @@ nav .more {
 }
 
 #living-room .room {
-  width: 95%;
-  height: 300px;
+  height: 700px;
   display: flex;
   gap: 3rem;
 }
 
 #living-room .big-room {
-  align-self: flex-end;
+  position: absolute;
+  transition: 1s;
+}
+#living-room .big-room.show{
+  transform: translateY(100%);
+}
+#living-room .roomImg {
+  width: 70%;
+  height: 80%;
+  border-radius: 32px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#living-room .roomImg img {
+  width: 100%;
+}
+
+#living-room .small-room .roomImg {
+  clip-path: polygon(0% 0%, 90% 0%, 70% 100%, 0% 100%);
+}
+
+#living-room .big-room .roomImg {
+  order: 2;
+  clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 10% 100%);
+}
+
+#living-room .small-room img {
+  transform: translate(8%, -35%) scale(1.6);
 }
 
 #living-room .big-room img {
-  order: 2;
-}
-
-#living-room .room img {
-  width: 100%;
-  border-radius: 32px;
-  z-index: 1;
+  transform: translate(-5%, 0%) scale(1.5);
 }
 
 #living-room .room article {
+  width: 40%;
+  height: 80%;
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
 }
 
 #living-room .room article h3 {
-  margin-bottom: 0.8vw;
+  margin-bottom: 2rem;
 }
 
 #living-room .big-room article :is(h3, p) {
@@ -434,79 +487,99 @@ nav .more {
 }
 
 #living-room .room article p {
-  line-height: 1.5rem;
+  font-size: 2rem;
+  line-height: 4.5rem;
   margin-bottom: 1vw;
 }
 
 #living-room .room article .btns {
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
 }
-
+#living-room .big-room article .btns{
+  justify-content: end;
+}
 #living-room .room article button {
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 1% 3%;
 }
 
-#contact-information {
-  width: 100%;
+#living-room .small-room article p{
   position: relative;
-  padding: 8% 10%;
+  left: -80px;
+}
+#living-room .small-room article .btns{
+  position: relative;
+  left: -180px;
+}
+#living-room .big-room article h3{
+  position: relative;
+  right: -180px;
+}
+#living-room .big-room article p{
+  position: relative;
+  right: -120px;
 }
 
-#contact-information>img {
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
 
-#contact-information .section-content {
-  padding: 0;
+
+
+#contact-information {
+  min-height: 100vh;
+  position: relative;
+  background-image: url('../../img/更新的檔/04-contact/background.png');
+  background-size: cover;
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-#contact-information .section-content> :nth-child(1) {
-  width: 100%;
-  height: 100%;
+#contact-information .section-content {
+  display: flex;
+  position: relative;
+  width: 90%;
+  /* background-color: rgba(255, 255, 255 , 0.5); */
 }
 
-#contact-information .section-title {
-  width: 400px;
+#contact-information .borderPic {
+  width: calc(100% - 200px);
+  height: calc(100% - 2 * var(--web-side-padding-y));
+  top: var(--web-side-padding-y);
+  left: 100px;
+  position: absolute;
+}
+
+#contact-information .section-content>section {
+  width: 100%;
   display: flex;
   flex-flow: column;
-}
-
-#contact-information .section-title h1:nth-child(2) {
-  align-self: end;
 }
 
 #contact-information .info {
   display: flex;
   flex-flow: column;
   gap: 1.5rem;
-  margin-left: 15%;
 }
 
 #contact-information .info>* {
   line-height: 2rem;
 }
 
+#contact-information .icons {
+  display: flex;
+  gap: 2rem;
+  transform: translate(-10%, 40%);
+}
+
+
 #contact-information .map {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
 }
 
 #contact-information .map iframe {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1366px) {
@@ -563,27 +636,6 @@ nav .more {
 }
 
 @media (max-width: 768px) {
-  #living-room .small-room img {
-    clip-path: polygon(0% 0%, 90% 0%, 60% 100%, 0% 100%);
-  }
-
-  #living-room .big-room img {
-    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 10% 100%);
-  }
-
-  #living-room .big-room {
-    position: absolute;
-    transition: 1s;
-  }
-
-  #living-room .big-room.show {
-    transform: translateY(350px);
-  }
-
-  .mblong {
-    margin-bottom: 350px;
-  }
-
   #contact-information {
     padding: var(--web-side-padding-x) var(--web-side-padding-y);
   }
