@@ -99,8 +99,42 @@
                         </span>
                     </h1>
                 </article>
+                <div class="about-info">
+                    <div class="imgSwiper">
+                        <!-- Swiper -->
+                        <div class="swiper aboutSEETYSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination abSwiper"></div>
+                        </div>
+                    </div>
+                    <div class="text-n-controller">
+                        <article>
+                            <div class="container">
+                                <p>
+                                    說明文字，說明文字，說明文字，說明文字，說明文字，說明文字，說明文字，說明文字，說明文字，
+                                </p>
+                            </div>
+                        </article>
+                        <section class="controller">
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-forward-step"></i>
+                        </section>
+                    </div>
+                </div>
             </div>
             <img class="decorate-cloud" src="../../img/更新的檔/01-about/cloud.png" alt="">
+
         </section>
 
         <section id="performance-information">
@@ -114,7 +148,7 @@
                 </div>
                 <article class="performance-information-cards">
                     <!-- Swiper -->
-                    <div class="swiper mySwiper">
+                    <div class="swiper showInfoSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="performance-information-card">
@@ -257,15 +291,33 @@
 
     <!-- swiper連結 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
+
+
+
+    <!-- 關於SEETY Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".aboutSEETYSwiper", {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 0,
+            loop: true,
             pagination: {
-                el: ".swiper-pagination",
+                el: ".swiper-pagination.abSwiper",
                 clickable: true,
             },
+            navigation: {
+                prevEl: ".fa-backward-step",
+                nextEl: ".fa-forward-step",
+            },
+        });
+    </script>
+
+
+
+    <!-- 展演資訊 Initialize Swiper -->
+    <script>
+        var swiper2 = new Swiper(".showInfoSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
             breakpoints: {
                 768: {
                     slidesPerView: 2,
@@ -275,8 +327,9 @@
                 }
             }
         });
-
     </script>
+
+
     <!-- JS連結 -->
     <script src="./script.js"></script>
 
