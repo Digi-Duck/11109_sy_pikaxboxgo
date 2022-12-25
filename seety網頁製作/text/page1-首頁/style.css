@@ -140,13 +140,11 @@ nav .back-to-top {
   top: 100%;
   right: 3%;
   display: none;
+  mix-blend-mode: overlay;
 }
 nav .back-to-top.appear {
   display: block;
   animation: appear 0.7s ease-out forwards;
-}
-nav .back-to-top.appear:hover {
-  box-shadow: ;
 }
 
 /* main */
