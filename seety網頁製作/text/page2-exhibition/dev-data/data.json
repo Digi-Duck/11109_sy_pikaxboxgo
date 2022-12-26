@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "image": "{__dirname}/img/show/3.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipMlWiburcRvKxKuHH4GhOFaLZmNW0qYSgelI10m=w600-h0",
     "exhibitionName": "4Samantha「剛好的光影」攝影工作坊",
     "performer": "4Samantha 莎曼莎",
     "performerDescription": "生於義大利，獨立攝影師、IG 視覺內容講師。八年攝影資歷，擅長以光影作畫，曾為百事可樂、國泰人壽、長榮航空等品牌拍攝形象。</br>入選 Instagram 官方精選用戶，曾至外交部、行政院、交通部等公部門教授「Instagram 視覺化內容行銷」課程，現為蝦皮認證講師。教學累積超過百場，學員人數破千。</br>已出版線上課程「IG 風格策展人」與攝影文集《在場證明》，並擔任哲學講座「雲端哲人」共同製作人。",
@@ -18,7 +18,7 @@
   },
   {
     "id": 1,
-    "image": "{__dirname}/img/show/1.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipNDahQoF8uaji7N-YOXLra4RGs2skF6esLTSMqW=w600-h0",
     "exhibitionName": "漂流出口 Tour 2021-台南Seety",
     "performer": ["漂流出口"],
     "performerDescription": "巫尚.碧海 (Guitar/ Vocals)</br>布妲菈.碧海 (Bass/ Vocals)</br>林肯 (Drums)",
@@ -35,7 +35,7 @@
   },
   {
     "id": 2,
-    "image": "{__dirname}/img/show/2.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipO8xfQJiHHHMfc89sSrAdGrAiDhJB0KaOQqwLmZ=w600-h0",
     "exhibitionName": "《擲地有聲》邱淑蟬＆平衡訊號 春季小巡演 台南",
     "performer": ["邱淑蟬＆平衡訊號"],
     "performerDescription": null,
@@ -52,7 +52,7 @@
   },
   {
     "id": 3,
-    "image": "{__dirname}/img/show/2.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipPMTYCSyZYnaHpoKU8V0lhvRsIW8bTxQKZSrnR2=w600-h0",
     "exhibitionName": "音遊 Halletsu with Sobobuki 台灣巡演 2019",
     "performer": ["邱淑蟬＆平衡訊號"],
     "performerDescription": null,
@@ -69,7 +69,7 @@
   },
   {
     "id": 4,
-    "image": "{__dirname}/img/show/2.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipNU9vp8kKPTq4JgDoW2-MO5kHyTl1FMbRsOIJZD=w600-h0",
     "exhibitionName": "『Still Life Project-爵士三重奏』",
     "performer": [
       "邱淑蟬鋼琴/作曲: 鄭劭宇 Eric Cheng (New York, USA)",
@@ -90,7 +90,7 @@
   },
   {
     "id": 4,
-    "image": "{__dirname}/img/show/2.jpg",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipNjA9DaXt7Ikw8ZNSoImLWs91bh79RmAa2vnxXI=w600-h0",
     "exhibitionName": "The island 序 - 不插電台灣巡迴",
     "performer": ["「The island」序"],
     "performerDescription": null,
