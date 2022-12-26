@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 
-/* .swiper {
+.swiper {
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -14,11 +14,11 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px; */
+  font-size: 18px;
 
-/* Center slide text vertically */
+  /* Center slide text vertically */
 
-/* display: -webkit-box;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -30,7 +30,7 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-} */
+}
 
 .swiper-pagination {
   position: relative;
@@ -44,26 +44,10 @@
   height: 20vh;
 }
 
-/* .container {
-  width: 90%;
-  height: 100vh;
-  margin: auto;
-  background: linear-gradient(45deg, #a4a4a4, #a99f9f);
+.performance-information-card {
+  height: 20vh;
 }
 
-.exhibition {
-  width: 70%;
-  height: 50%;
-  display: flex;
-  justify-content: space-between;
+.performance-information-card img {
+  height: 100%;
 }
-.image-area {
-  position: relative;
-  width: 50%;
-}
-.image-area img {
-  width: 100%;
-}
-.image-area a {
-  position: absolute;
-} */
