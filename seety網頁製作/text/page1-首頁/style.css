@@ -28,6 +28,7 @@ h6 {
 
 p {
   font-size: 1rem;
+  font-weight: 700;
 }
 
 :root {
@@ -70,11 +71,12 @@ header {
   height: 90vh;
   display: flex;
   flex-flow: column;
+
 }
 
 .banner {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('../../img/更新的檔/00-header/banner\ background.JPG');
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,11 +87,9 @@ header {
 }
 
 .banner .logo {
-  /* width: 30%; */
   position: absolute;
-  right: 25%;
-  bottom: 250px;
-  transform: translate(49%, 33%);
+  top: 50%;
+  right: 20%;
   width: 532px;
   height: 296px;
 }
@@ -142,17 +142,27 @@ nav .back-to-top {
   display: none;
   mix-blend-mode: overlay;
 }
+
 nav .back-to-top.appear {
   display: block;
   animation: appear 0.7s ease-out forwards;
 }
 
 /* main */
+main {
+  background: linear-gradient(#432C2C, #A99F9F);
+}
+
+main>section {
+  overflow: hidden;
+}
+
 .section-content {
   width: 100%;
   height: 100%;
   padding: var(--web-side-padding-y) var(--web-side-padding-x);
-
+  position: relative;
+  z-index: 1;
   /* test */
   /* border: 1px solid #000; */
 }
@@ -174,7 +184,7 @@ nav .back-to-top.appear {
 }
 
 #about-seety {
-  background-image: url('../../img/更新的檔/01-about/background.png');
+  /* background-image: url('../../img/更新的檔/01-about/background.png'); */
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -195,7 +205,8 @@ nav .back-to-top.appear {
   left: 0;
   bottom: 0;
   z-index: 2;
-  opacity: 0.3;
+  opacity: 0.5;
+  clip-path: polygon(0% 0%, 30% 0%, 35% 25%, 60% 50%, 100% 60%, 100% 100%, 0% 100%);
 }
 
 #about-seety .about-info {
@@ -252,6 +263,11 @@ nav .back-to-top.appear {
   flex-flow: column;
   justify-content: space-between;
   padding: 5rem 0;
+  gap: 3rem;
+}
+
+#about-seety .text-n-controller .imgSwiper {
+  display: none;
 }
 
 #about-seety .container p {
@@ -294,8 +310,25 @@ nav .back-to-top.appear {
   color: #000;
 }
 
+#about-seety .swiper-pagination.abSwiper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-seety .swiper-pagination.abSwiper span {
+  width: 30px;
+  height: 30px;
+  background-color: var(--sub-decorate-color);
+}
+
+#about-seety .swiper-pagination.abSwiper .swiper-pagination-bullet-active {
+  background-color: var(--main-decorate-color);
+}
+
 #performance-information {
-  background-image: url('../../img/更新的檔/02-performance/background.png');
+  /* background-image: url('../../img/更新的檔/02-performance/background.png'); */
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -404,48 +437,54 @@ nav .back-to-top.appear {
 
 #performance-information .sound-effect {
   width: 25%;
+  min-width: 300px;
   position: absolute;
   bottom: 3rem;
   mix-blend-mode: multiply;
 }
 
 #living-room {
-  background-image: url('../../img/更新的檔/03-room/background.png');
+  /* background-image: url('../../img/更新的檔/03-room/background.png'); */
   background-size: cover;
   min-height: 100vh;
   /* height: 100vh; */
 }
+
 #living-room .rooms.mblong {
-  margin-bottom: 700px;
+  margin-bottom: 550px;
 }
+
 #living-room .rooms {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  gap: 3rem;
+  height: 70%;
   position: relative;
   transition: margin-bottom 1s;
 }
 
 #living-room .room {
-  height: 700px;
   display: flex;
   gap: 3rem;
 }
 
 #living-room .big-room {
   position: absolute;
+  top: 0;
+  right: 0;
   transition: 1s;
+  justify-content: end;
 }
+
 #living-room .big-room.show {
-  transform: translateY(100%);
+  transform: translateY(110%);
 }
+
 #living-room .roomImg {
-  width: 70%;
-  height: 80%;
+  width: 60%;
   border-radius: 32px;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #living-room .roomImg img {
@@ -462,19 +501,34 @@ nav .back-to-top.appear {
 }
 
 #living-room .small-room img {
-  transform: translate(8%, -35%) scale(1.6);
+  transform: translate(-5%, -30%) scale(2.5);
 }
 
 #living-room .big-room img {
-  transform: translate(-5%, 0%) scale(1.5);
+  transform: translate(-15%, 10%) scale(2);
 }
 
 #living-room .room article {
   width: 40%;
-  height: 80%;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform 1s, opacity 1s, position 1s;
+}
+
+#living-room .small-room article {
+  transform-origin: left;
+}
+
+#living-room .big-room article {
+  transform-origin: right;
+}
+
+#living-room .room article.show {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 #living-room .room article h3 {
@@ -491,39 +545,55 @@ nav .back-to-top.appear {
   margin-bottom: 1vw;
 }
 
+#living-room .room article p span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: var(--main-bg-color);
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
 #living-room .room article .btns {
+  width: 95%;
   display: flex;
   gap: 1.5rem;
 }
+
 #living-room .big-room article .btns {
   justify-content: end;
 }
+
 #living-room .room article button {
-  font-size: 2rem;
-  padding: 1% 3%;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 5px 8px;
 }
 
 #living-room .small-room article p {
   position: relative;
-  left: -80px;
+  left: -40px;
 }
+
 #living-room .small-room article .btns {
   position: relative;
-  left: -180px;
+  left: -80px;
 }
+
 #living-room .big-room article h3 {
   position: relative;
-  right: -180px;
+  right: -80px;
 }
+
 #living-room .big-room article p {
   position: relative;
-  right: -120px;
+  right: -40px;
 }
 
 #contact-information {
   min-height: 100vh;
   position: relative;
-  background-image: url('../../img/更新的檔/04-contact/background.png');
+  /* background-image: url('../../img/更新的檔/04-contact/background.png'); */
   background-size: cover;
   position: relative;
   display: flex;
@@ -535,9 +605,12 @@ nav .back-to-top.appear {
   display: flex;
   position: relative;
   width: 90%;
+  /* padding: 40px var(--web-side-padding-x); */
   /* background-color: rgba(255, 255, 255 , 0.5); */
 }
-
+#contact-information .section-title{
+  margin-bottom: 2.5rem;
+}
 #contact-information .borderPic {
   width: calc(100% - 200px);
   height: calc(100% - 2 * var(--web-side-padding-y));
@@ -546,7 +619,7 @@ nav .back-to-top.appear {
   position: absolute;
 }
 
-#contact-information .section-content > section {
+#contact-information .section-content>section {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -555,19 +628,23 @@ nav .back-to-top.appear {
 #contact-information .info {
   display: flex;
   flex-flow: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
-#contact-information .info > * {
+#contact-information .info>* {
   line-height: 2rem;
 }
 
 #contact-information .icons {
   display: flex;
-  gap: 2rem;
-  transform: translate(-10%, 40%);
+  gap: 1rem;
+  position: absolute;
+  bottom: 0%;
+  left: 200px;
 }
-
+#contact-information .icons .icon img{
+  width: 50px;
+}
 #contact-information .map {
   width: 100%;
 }
@@ -586,10 +663,19 @@ nav .back-to-top.appear {
   nav .list {
     position: absolute;
     top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 90vh;
     flex-flow: column;
     text-align: end;
     background-color: var(--main-bg-color);
     padding: 1rem 0.5rem 1rem 2rem;
+    z-index: 1;
+  }
+
+  nav .list a {
+    margin: 2rem;
+    text-align: center;
   }
 
   nav .more {
@@ -604,33 +690,160 @@ nav .back-to-top.appear {
     display: block;
   }
 
-  #contact-information .section-content {
-    padding-left: 10%;
+
+  #performance-information {
+    min-height: 80vh;
   }
 
-  #living-room .room img {
-    width: 60%;
+  #living-room {
+    min-height: 80vh;
   }
 
-  #living-room .room article {
-    width: 40%;
+  h3 {
+    font-size: 3rem;
   }
 
-  #living-room .room img {
-    object-fit: cover;
+  #living-room .room article p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  #living-room .room article button {
+    font-size: 1.5rem;
   }
 
   #contact-information {
-    padding: 20% 10%;
+    padding: 10%;
   }
 
   #contact-information .section-content {
     display: flex;
     flex-flow: column;
+    gap: 3rem;
+  }
+
+  #contact-information .map {
+    height: 500px;
+  }
+
+  #contact-information .icons {
+    position: static;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 960px) {
+  #living-room .small-room img {
+    transform: translate(-3%, -50%) scale(4);
+  }
+
+  #living-room .big-room img {
+    transform: translate(-20%, 20%) scale(3.5);
   }
 }
 
 @media (max-width: 768px) {
+  .banner {
+    background-size: 280%;
+    background-position: 85% 0px;
+    background-origin: right;
+  }
+
+  .banner .logo {
+    width: 250px;
+    top: 40%;
+    left: 10%;
+  }
+
+  #about-seety {
+    padding-bottom: 100px;
+  }
+
+  #about-seety .imgSwiper {
+    display: none;
+  }
+
+  #about-seety .text-n-controller {
+    padding: 0;
+  }
+
+  #about-seety .text-n-controller .imgSwiper {
+    display: block;
+    width: 100%;
+  }
+
+  #performance-information {
+    padding-bottom: 100px;
+  }
+
+  #living-room {
+    min-height: 50vh;
+  }
+
+  #living-room .room {
+    flex-flow: column;
+  }
+
+  #living-room .rooms.mblong {
+    margin-bottom: 900px;
+  }
+
+  #living-room .big-room {
+    align-items: flex-end;
+  }
+
+  #living-room .room .roomImg {
+    transition: clip-path 1s, width 1s;
+  }
+
+  #living-room .room .roomImg.show {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+  }
+
+  #living-room .room article {
+    position: absolute;
+    width: 100%;
+    transform: scaleY(0);
+  }
+
+  #living-room .room article.show {
+    position: static;
+    transform: scaleY(1);
+  }
+
+  #living-room .small-room article p {
+    position: relative;
+    left: 0px;
+  }
+
+  #living-room .small-room article .btns {
+    position: relative;
+    left: 0px;
+  }
+
+  #living-room .big-room article h3 {
+    position: relative;
+    right: 0px;
+  }
+
+  #living-room .big-room article p {
+    position: relative;
+    right: 0px;
+  }
+
+  #living-room .small-room article {
+    transform-origin: top;
+  }
+
+  #living-room .big-room article {
+    transform-origin: top;
+  }
+
+  #living-room .big-room .roomImg {
+    order: 0;
+  }
+
   #contact-information {
     padding: var(--web-side-padding-x) var(--web-side-padding-y);
   }
@@ -640,7 +853,7 @@ nav .back-to-top.appear {
     align-items: center;
   }
 
-  #contact-information .section-content > :nth-child(1) {
+  #contact-information .section-content> :nth-child(1) {
     width: 100%;
   }
 
@@ -651,69 +864,38 @@ nav .back-to-top.appear {
   #contact-information .map iframe {
     width: 100%;
   }
-}
 
-@media (max-width: 680px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  #performance-information .section-title {
-    width: 80%;
-  }
-
-  #performance-information .section-title + div {
-    top: calc(var(--web-side-padding-y) + 70px);
-    padding-right: 1.5rem;
-  }
-}
-
-@media (max-width: 540px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  #performance-information .section-title {
-    width: 70%;
-  }
-
-  #performance-information .section-title + div {
-    width: 60%;
-    height: 30px;
-    top: calc(var(--web-side-padding-y) + 70px);
-    padding-right: 1.5rem;
-    line-height: 1.5rem;
-  }
-
-  #contact-information .section-title {
-    width: 70%;
-    display: flex;
-    flex-flow: column;
-  }
 }
 
 @keyframes appear {
   0% {
     transform: translateY(-100%);
   }
+
   40% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-25%);
   }
+
   60% {
     transform: translateY(-33%);
   }
+
   70% {
     transform: translateY(-25%);
   }
+
   80% {
     transform: translateY(0);
   }
+
   90% {
     transform: translateY(-10%);
   }
+
   100% {
     transform: translateY(0);
   }

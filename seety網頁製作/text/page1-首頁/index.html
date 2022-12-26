@@ -128,6 +128,23 @@
                                 </p>
                             </div>
                         </article>
+                        <div class="imgSwiper">
+                            <!-- Swiper -->
+                            <div class="swiper aboutSEETYSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../img/更新的檔/01-about/about-pic.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination abSwiper"></div>
+                            </div>
+                        </div>
                         <section class="controller">
                             <i class="fa-solid fa-backward-step"></i>
                             <i class="fa-solid fa-play"></i>
@@ -236,12 +253,14 @@
                             <div class="container">
                                 <h3>小客廳</h3>
                                 <p>
-                                    小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，小客廳介紹，
+                                    基礎設施 : 空調、吧檯、平台鋼琴、沙發座椅、投射燈及展覽牆面。
+                                    <span></span>
+                                    適合類型 : 小編制音樂演出、作品展覽、講座、派對包場等。
                                 </p>
                             </div>
                             <div class="btns">
-                                <button>詳細介紹</button>
-                                <button>器材概覽</button>
+                                <a href="../page3-場地分頁/index.html"><button>詳細介紹</button></a>
+                                <a href="../page3-場地分頁/index.html"><button>器材概覽</button></a>
                             </div>
                         </article>
                     </section>
@@ -253,20 +272,20 @@
                             <div class="container">
                                 <h3>大舞廳</h3>
                                 <p>
-                                    大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，大舞廳介紹，
+                                    基礎設施 : 專業燈光音響設備、全身鏡牆、耐磨地板、棚拍背景幕。
+                                    <span></span>
+                                    適合類型 : 音樂展演、戲劇、棚拍、練舞室、講座、工作坊等。
                                 </p>
                             </div>
                             <div class="btns">
-                                <button>詳細介紹</button>
-                                <button>器材概覽</button>
+                                <a href="../page3-場地分頁/index.html"><button>詳細介紹</button></a>
+                                <a href="../page3-場地分頁/index.html"><button>器材概覽</button></a>
                             </div>
                         </article>
                     </section>
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
         <section id="contact-information">
             <img class="borderPic" src="../../img/更新的檔/04-contact/border.png" alt="">
             <div class="section-content">
@@ -288,28 +307,42 @@
                             <h6>周一至周五 1000-1730 <br>
                                 周六周日休息</h6>
                         </div>
-                        <div class="icons">
-                            <div class="icon fb">
-                                <img src="../../img/更新的檔/04-contact/ICONS/FB_ICON.png" alt="">
-                            </div>
-                            <div class="icon line">
-                                <img src="../../img/更新的檔/04-contact/ICONS/LINE_ICON.png" alt="">
-                            </div>
-                            <div class="icon ig">
-                                <img src="../../img/更新的檔/04-contact/ICONS/IG_ICON.png" alt="">
-                            </div>
-                        </div>
                     </article>
                 </section>
+
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.670055753884!2d120.19296354882262!3d22.99915733407257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc836756906e41b41!2zU2VldHnmlrDln47oppYg5bGV5ryU56m66ZaT!5e0!3m2!1szh-TW!2stw!4v1671429405675!5m2!1szh-TW!2stw"
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
+                <div class="icons">
+                    <a target="_blank" href="https://www.facebook.com/seetytainan/">
+                        <div class="icon fb">
+                            <img src="../../img/更新的檔/04-contact/ICONS/FB_ICON.png" alt="">
+                        </div>
+                    </a>
+                    <a target="_blank" href="mailto:seetytainan@gmail.com">
+                        <div class="icon email">
+                            <img src="../../img/更新的檔/04-contact/ICONS/EMAIL_ICON.png" alt="">
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/seetytainan/">
+                        <div class="icon ig">
+                            <img src="../../img/更新的檔/04-contact/ICONS/IG_ICON.png" alt="">
+                        </div>
+                    </a>
+
+
+
+                </div>
             </div>
 
         </section>
+    </main>
+    <footer>
+
     </footer>
 
 
@@ -326,7 +359,7 @@
             loop: true,
             pagination: {
                 el: ".swiper-pagination.abSwiper",
-                clickable: true,
+                // clickable: true,
             },
             navigation: {
                 prevEl: ".fa-backward-step",

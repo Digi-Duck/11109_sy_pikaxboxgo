@@ -2,17 +2,29 @@ const listBar = document.querySelector('nav .more');
 const list = document.querySelector('nav .list');
 const place = document.querySelector('#living-room .big-room');
 const rooms = document.querySelector('.rooms');
+const roomImg = document.querySelectorAll('.roomImg');
 const saturn = document.querySelector('.back-to-top');
 const banner = document.querySelector('.banner');
+const roomArticle = document.querySelectorAll('.room article');
+
+
 
 listBar.addEventListener('click', () => {
   list.classList.toggle('show');
 });
 
-rooms.addEventListener('click', () => {
-  place.classList.toggle('show');
-  rooms.classList.toggle('mblong');
-});
+roomImg.forEach(img => {
+  img.addEventListener('click', () => {
+    place.classList.toggle('show');
+    rooms.classList.toggle('mblong');
+    roomArticle.forEach(room => {
+      room.classList.toggle('show')
+    })
+    roomImg.forEach(img => {
+      img.classList.toggle('show')
+    });
+  });
+})
 
 let observer = new IntersectionObserver(
   (entries) => {
@@ -75,3 +87,6 @@ window.addEventListener('scroll', () => {
 //         }, 8000);
 
 // }
+
+
+
