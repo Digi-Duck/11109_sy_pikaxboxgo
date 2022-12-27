@@ -15,6 +15,7 @@ listBar.addEventListener('click', () => {
 
 roomImg.forEach(img => {
   img.addEventListener('click', () => {
+    console.log(1);
     place.classList.toggle('show');
     rooms.classList.toggle('mblong');
     roomArticle.forEach(room => {
@@ -25,6 +26,7 @@ roomImg.forEach(img => {
     });
   });
 })
+
 
 let observer = new IntersectionObserver(
   (entries) => {
