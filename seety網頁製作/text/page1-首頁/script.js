@@ -92,3 +92,11 @@ window.addEventListener('scroll', () => {
 
 
 
+const navListTag = document.querySelectorAll('nav .list a');
+
+navListTag.forEach(tag =>{
+  tag.addEventListener('click',()=>{
+    console.log(1);
+    list.classList.remove('show')
+  })
+})
