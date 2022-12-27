@@ -54,7 +54,7 @@
     "id": 3,
     "image": "https://lh3.googleusercontent.com/p/AF1QipPMTYCSyZYnaHpoKU8V0lhvRsIW8bTxQKZSrnR2=w600-h0",
     "exhibitionName": "音遊 Halletsu with Sobobuki 台灣巡演 2019",
-    "performer": ["邱淑蟬＆平衡訊號"],
+    "performer": [""],
     "performerDescription": null,
     "date": {
       "begin": "2019,11,15",
@@ -73,8 +73,8 @@
     "exhibitionName": "『Still Life Project-爵士三重奏』",
     "performer": [
       "邱淑蟬鋼琴/作曲: 鄭劭宇 Eric Cheng (New York, USA)",
-      "貝斯: David Ambrosio (New York, USA)",
-      "爵士鼓: Satoshi Takeishi (New York, USA)＆平衡訊號"
+      "</br>貝斯: David Ambrosio (New York, USA) ",
+      "</br>爵士鼓: Satoshi Takeishi (New York, USA)"
     ],
     "performerDescription": null,
     "date": {
