@@ -29,6 +29,7 @@ h6 {
 p {
   font-size: 1rem;
   font-weight: 700;
+  
 }
 
 :root {
@@ -38,7 +39,6 @@ p {
   --sub-decorate-color: #847d7d;
   --main-bg-color: #3d342e;
   --card-sub-color: #eaeaea;
-  --nav-height: 10vh;
 }
 
 body {

@@ -13,13 +13,16 @@ a {
 :root {
     --web-side-padding-y: 80px;
     --web-side-padding-x: 200px;
-    --main-decorate-color: #F7C972;
-    --main-bg-color: #777777;
-    --card-sub-color: #EAEAEA;
+    --main-decorate-color: #c78763;
+    --sub-decorate-color: #847d7d;
+    --main-bg-color: #3d342e;
+    --card-sub-color: #eaeaea;
 }
 
 body {
     perspective: 500px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 nav {
@@ -27,7 +30,7 @@ nav {
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     padding: 0 var(--web-side-padding-x);
     background-color: var(--main-bg-color);
     position: sticky;
@@ -38,37 +41,65 @@ nav {
 nav .list {
     display: flex;
     gap: 1rem;
-
 }
 
 nav ul {
     display: flex;
     gap: 1rem;
-    justify-content: end;
 }
 
 nav li {
     font-size: 1.5vw;
+    font-weight: 700;
     line-height: 1.5vw;
-    border: 3px solid var(--main-decorate-color);
+    background-color: var(--main-decorate-color);
     padding: 10px 16px;
+    border-radius: 15px;
 }
 
 nav .more {
     display: none;
 }
+nav button{
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5vw;
+    font-weight: 700;
+    line-height: 1.5vw;
+    background-color: var(--main-decorate-color);
+    padding: 10px 16px;
+    border-radius: 15px;
+}
+.back-to-top {
+    display: none;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+}
+
+.back-to-top img {
+    width: 100%;
+}
+
+.back-to-top.appear {
+    display: block;
+    position: fixed;
+    top: 9vh;
+    right: 30px;
+    animation: appear 0.7s ease-out forwards;
+}
 
 .room {
     width: 100%;
+    height: 90vh;
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
+    background-color: #000;
 }
 
 .room .room-background {
-    width: 110%;
-    position: relative;
-    left: -5%;
+    width: 100%;
     z-index: -1;
 }
 
@@ -83,27 +114,27 @@ nav .more {
 }
 
 .bass {
-    width: 16.5%;
+    width: 16%;
     position: absolute;
-    inset: 12.5vw 0 0 14%;
+    inset: 17vw 0 0 15%;
 }
 
 .mic {
-    width: 8.5%;
+    width: 7.5%;
     position: absolute;
-    inset: 9vw 0 0 30.5%;
+    inset: 13.5vw 0 0 31.5%;
 }
 
 .drum {
-    width: 28%;
+    width: 27%;
     position: absolute;
-    inset: 4.5vw 0 0 36.5%;
+    inset: 9vw 0 0 37.5%;
 }
 
 .eg {
-    width: 17.5%;
+    width: 21%;
     position: absolute;
-    inset: 13.5vw 0 0 64%;
+    inset: 18vw 0 0 62%;
 }
 
 .room div:hover :is(img, .info) {
@@ -118,13 +149,15 @@ nav .more {
     position: relative;
     border-radius: 1rem;
 }
-.room .info-content span{
+
+.room .info-content span {
     display: block;
     width: 100%;
     height: 2px;
     background-color: var(--main-bg-color);
     margin: 10px 0;
 }
+
 .bass .info {
     position: absolute;
     inset: -40% auto auto -50%;
@@ -166,7 +199,7 @@ nav .more {
 
 .mic .info {
     position: absolute;
-    inset: -30% auto auto -180%;
+    inset: -40% auto auto -180%;
     opacity: 0;
     transition: opacity .1s ease-out;
 }
@@ -244,7 +277,7 @@ nav .more {
 
 .eg .info {
     position: absolute;
-    inset: -30% -30% auto auto;
+    inset: -60% -15% auto auto;
     opacity: 0;
     transition: opacity .1s ease-out;
 }
@@ -283,4 +316,110 @@ nav .more {
 }
 
 
+@media (max-width: 1366px) {
+    :root {
+        --web-side-padding-y: 40px;
+        --web-side-padding-x: 100px;
+    }
 
+    nav .list {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        flex-flow: column;
+        text-align: end;
+        background-color: var(--main-bg-color);
+        padding: 1rem 0.5rem 1rem 2rem;
+        z-index: 1;
+    }
+
+    nav li:not(.more) {
+        background-color: transparent;
+        background-image: url('../../img/更新的檔/00-header/nav-list-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    nav .list a {
+        text-align: center;
+    }
+
+    nav .more {
+        display: block;
+    }
+
+    nav ul .list {
+        display: none;
+    }
+
+    nav ul .list.show {
+        display: flex;
+        flex-flow: column;
+        gap: 2rem;
+    }
+    .room .info-content{
+        font-size: 1.25rem;
+    }
+    .bass .info{
+        inset: -60% auto auto -50%;
+    }
+    .bass .info::after{
+        height: 70px;
+    }
+    .mic .info{
+        inset: -60% auto auto -250%;
+    }
+    .drum .info::after{
+        height: 0;
+    }
+    .eg .info{
+        inset: -70% -50% auto auto;
+    }
+    .eg .info::after{
+        height: 50px;
+        right: 60%;
+    }
+}
+
+@media (max-width: 960px) {
+    .back-to-top {
+        width: 150px;
+    }
+    .room .info-content{
+        font-size: 1rem;
+        padding: 1rem 1.5rem 0.5rem;
+    }
+    .bass .info{
+        inset: -80% auto auto -50%;
+    }
+    .bass .info::after{
+        height: 40px;
+    }
+    .mic .info::before {
+        width: 0px;
+    }
+    .mic .info::after{
+        right: -0px;
+        height: 70px;
+    }
+    .eg .info::after{
+        height: 30px;
+    }
+}
+
+@media(max-width:660px) {
+    :root {
+        --web-side-padding-x: 32px;
+    }
+}
+
+@media(max-width:576px) {
+    .back-to-top {
+        width: 100px;
+    }
+}
