@@ -690,6 +690,7 @@ main>section {
     background-repeat: no-repeat;
     background-position: 0 50%;
     padding: 2rem;
+    font-size: 2rem;
   }
   nav .list a {
     text-align: center;
@@ -1000,8 +1001,9 @@ main>section {
   h3{
     font-size: 2rem;
   }
-  #living-room .small-room article p {
-    font-size: 1.5rem;
+  #living-room .room article p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
   h5{
     font-size: 1.5rem;
