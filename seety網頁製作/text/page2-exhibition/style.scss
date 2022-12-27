@@ -202,19 +202,15 @@ nav {
   margin: 10vh 0;
   padding: 0 150px;
   width: 100%;
-
   .render-zone {
     width: 100%;
     display: flex;
-    // border: 1px solid black;
     flex-direction: column;
     flex-wrap: wrap;
     .information-card {
-      height: 30vh;
+      height: 30vw;
       width: 100%;
       border: 1px solid #92908e;
-
-      // background-color: red;
       margin-bottom: 10px;
       .container {
         height: 100%;
@@ -238,11 +234,63 @@ nav {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          word-wrap: normal;
+          word-break: normal;
           h1 {
             margin-bottom: 10px;
           }
         }
       }
     }
+    @media (max-width: 1288px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .information-card {
+        width: 90%;
+        height: 40vw;
+        margin-bottom: 30px;
+        .container {
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          justify-content: flex-start;
+          .image-area {
+            width: 100%;
+            height: 30%;
+            align-items: flex-start;
+          }
+          .content-area {
+            justify-content: flex-start;
+            width: 100%;
+            height: 70%;
+            h1 {
+              font-size: large;
+              margin: 20px 5px;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 1035px) {
+      grid-template-columns: repeat(2, 1fr);
+      .information-card {
+        width: 90%;
+        justify-self: center;
+        height: 450px;
+      }
+    }
+    @media (max-width: 468px) {
+      grid-template-columns: 1fr;
+      .information-card {
+        width: 90%;
+        height: 70vh;
+      }
+    }
+  }
+  @media (max-width: 1035px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
   }
 }
