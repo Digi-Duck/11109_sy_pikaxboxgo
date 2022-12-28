@@ -30,7 +30,8 @@ a {
 }
 
 body {
-  background-color: bisque;
+  color: #a99f9f;
+  background: linear-gradient(180deg, #432c2c, #695960);
 }
 
 nav {
@@ -44,11 +45,14 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 2;
 }
 nav .list {
   display: flex;
   gap: 1rem;
+}
+nav .more {
+  display: none;
 }
 nav ul {
   display: flex;
@@ -67,19 +71,18 @@ nav li {
   border-radius: 15px;
 }
 
-nav .more {
-  display: none;
-}
-
 .back-to-top {
   display: none;
   width: 200px;
   height: 200px;
-  z-index: 3;
+  z-index: 1;
 }
-
 .back-to-top img {
+  transition: transform 1s linear;
   width: 100%;
+}
+.back-to-top img:hover {
+  transform: scale(1.5) translateY(10%);
 }
 
 .back-to-top.appear {
@@ -104,9 +107,12 @@ nav .more {
     height: 90vh;
     flex-flow: column;
     text-align: end;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-decorate-color);
     padding: 1rem 0.5rem 1rem 2rem;
     z-index: 1;
+  }
+  nav .list a {
+    text-align: center;
   }
   nav li:not(.more) {
     background-color: transparent;
@@ -116,9 +122,6 @@ nav .more {
     background-position: 0 50%;
     padding: 1rem;
     font-size: 1.5rem;
-  }
-  nav .list a {
-    text-align: center;
   }
   nav .more {
     display: block;
@@ -144,6 +147,7 @@ nav .more {
   transform: translate(-50%, -50%);
   position: fixed;
   inset: 50% auto auto 50%;
+  z-index: 3;
 }
 .block-all.show {
   display: block;
@@ -178,6 +182,11 @@ nav .more {
   width: 100%;
   border: 1px solid #92908e;
   margin-bottom: 10px;
+  position: relative;
+}
+#render .render-zone .information-card .anchor {
+  position: absolute;
+  inset: -10vh auto auto 0;
 }
 #render .render-zone .information-card .container {
   height: 100%;
@@ -189,14 +198,20 @@ nav .more {
   width: 40%;
   display: flex;
   justify-content: flex-start;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.637), rgba(202, 202, 202, 0.171));
   align-items: center;
+  justify-content: center;
 }
 #render .render-zone .information-card .container .image-area img {
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center center;
+     object-position: center center;
 }
 #render .render-zone .information-card .container .content-area {
-  border: 1px solid #92908e;
+  border-left: 1px dashed #92908e;
   padding-left: 3%;
   width: 60%;
   display: flex;
@@ -206,7 +221,10 @@ nav .more {
   word-break: normal;
 }
 #render .render-zone .information-card .container .content-area h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+#render .render-zone .information-card .container .content-area h4 {
+  margin: 10px 0;
 }
 #render .render-zone .information-card .container .content-area button {
   width: 75px;
@@ -214,6 +232,9 @@ nav .more {
   line-height: 40px;
   background-color: #c87561;
   border-radius: 5px;
+  margin-top: 30px;
+  margin-right: 5%;
+  align-self: flex-end;
 }
 #render .render-zone .information-card .container .content-area button:hover {
   background-color: #c63771;
@@ -236,13 +257,23 @@ nav .more {
   }
   #render .render-zone .information-card .container .image-area {
     width: 100%;
-    height: 30%;
-    align-items: flex-start;
+    height: 50%;
+    justify-content: center;
+  }
+  #render .render-zone .information-card .container .image-area img {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
   #render .render-zone .information-card .container .content-area {
     justify-content: flex-start;
     width: 100%;
-    height: 70%;
+    height: 50%;
+    overflow-y: scroll;
+  }
+  #render .render-zone .information-card .container .content-area::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #ffc0cb;
   }
   #render .render-zone .information-card .container .content-area h1 {
     font-size: large;

@@ -14,10 +14,12 @@ window.addEventListener('scroll', () => {
   }
 });
 
-blockAll.addEventListener('click', () => {
+window.addEventListener('click', () => {
+  // setTimeout(() => {
   if (blockAll.classList.contains('show')) {
     blockAll.classList.remove('show');
   }
+  // }, 100);
 });
 
 let showArr = [];
@@ -44,7 +46,9 @@ const dataObj = async function () {
               <p>${data.description}</p>
             </div>
     `);
-    renderContent.innerHTML += `<figure class="information-card"><div class="container"><div class="image-area"><img src="${
+    renderContent.innerHTML += `<figure class="information-card"><span id="anchor-${
+      data.id
+    }" class="anchor"></span><div class="container"><div class="image-area"><img src="${
       data.image
     }" alt="圖"></div><div class="content-area"><h1>${
       data.exhibitionName
@@ -58,8 +62,10 @@ const dataObj = async function () {
   const alink = document.querySelectorAll('.alink');
   alink.forEach((link) => {
     link.addEventListener('click', () => {
-      blockAll.classList.add('show');
-      blockAll.innerHTML = `${showArr[link.dataset.id]}`;
+      setTimeout(() => {
+        blockAll.classList.add('show');
+        blockAll.innerHTML = `${showArr[link.dataset.id]}`;
+      });
     });
   });
   console.log(showArr);
