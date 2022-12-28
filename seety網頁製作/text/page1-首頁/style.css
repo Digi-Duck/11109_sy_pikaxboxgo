@@ -29,7 +29,7 @@ h6 {
 p {
   font-size: 1rem;
   font-weight: 700;
-  
+
 }
 
 :root {
@@ -116,6 +116,11 @@ nav .list {
   gap: 1rem;
 }
 
+nav .list li:hover {
+  outline: 3px solid var(--main-decorate-color);
+  outline-offset: 3px;
+}
+
 nav ul {
   display: flex;
   gap: 1rem;
@@ -136,22 +141,37 @@ nav .more {
   display: none;
 }
 
-.back-to-top {
+.back-to-top-effectBox {
+  width: 300px;
+  height: 250px;
+  /* border: 3px solid #000; */
   display: none;
+  z-index: 3;
+  position: relative;
+}
+
+.back-to-top {
   width: 200px;
   height: 200px;
-  z-index: 3;
+  /* background-color: red; */
+  position: absolute;
+  top: -5px;
+  right: -70px;
+  transform-origin: 100px 0;
+  transition: transform 0.2s;
+  display: grid;
+  grid-template-columns: ;
 }
 
 .back-to-top img {
   width: 100%;
 }
 
-.back-to-top.appear {
+.back-to-top-effectBox.appear {
   display: block;
   position: fixed;
   top: 9vh;
-  right: 30px;
+  right: 0px;
   animation: appear 0.7s ease-out forwards;
 }
 
@@ -295,18 +315,23 @@ main>section {
   color: var(--sub-decorate-color);
   position: relative;
 }
-#about-seety .controller span{
+
+#about-seety .controller span {
   width: 40px;
 }
+
 #about-seety .controller>i {
   transition: transform 0.2s linear;
 }
-#about-seety .controller .fa-backward-step:active{
+
+#about-seety .controller .fa-backward-step:active {
   transform: translateX(-10px);
 }
-#about-seety .controller .fa-forward-step:active{
+
+#about-seety .controller .fa-forward-step:active {
   transform: translateX(10px);
 }
+
 .swiper-button-next.abSwiper::after {
   content: '';
 }
@@ -315,12 +340,14 @@ main>section {
   content: '';
 }
 
-#about-seety :is(.fa-play , .fa-pause) {
+#about-seety :is(.fa-play, .fa-pause) {
   color: var(--main-decorate-color);
 }
-#about-seety .switch{
+
+#about-seety .switch {
   display: none;
 }
+
 #about-seety .controller::before {
   content: 'Click !';
   font-size: 2rem;
@@ -456,12 +483,14 @@ main>section {
   height: 100%;
   object-fit: cover;
 }
-#performance-information .arrow{
+
+#performance-information .arrow {
   width: 15%;
   position: absolute;
   right: 200px;
   bottom: 50px;
 }
+
 #performance-information .sound-effect {
   width: 25%;
   min-width: 300px;
@@ -486,7 +515,8 @@ main>section {
   position: relative;
   transition: margin-bottom 1s;
 }
-#living-room .rooms .openBtn{
+
+#living-room .rooms .openBtn {
   background-color: var(--main-bg-color);
   aspect-ratio: 1;
   width: 25%;
@@ -500,20 +530,23 @@ main>section {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% ,-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 1;
   transition: opacity 0.5s;
 }
-#living-room .rooms .noshow{
+
+#living-room .rooms .noshow {
   opacity: 0;
 }
+
 #living-room .rooms .openBtn p {
   text-align: center;
   font-size: 1.5rem;
   color: var(--main-decorate-color);
   letter-spacing: 8px;
 }
+
 #living-room .room {
   display: flex;
   gap: 3rem;
@@ -732,16 +765,17 @@ main>section {
     padding: 1rem 0.5rem 1rem 2rem;
     z-index: 1;
   }
-  
-  nav li:not(.more){
+
+  nav li:not(.more) {
     background-color: transparent;
-    background-image: url('../../img/更新的檔/00-header/nav-list-background.png');
+    background-image: url('../../img/01-header/nav-list-background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 50%;
     padding: 1rem;
     font-size: 1.5rem;
   }
+
   nav .list a {
     text-align: center;
   }
@@ -764,6 +798,7 @@ main>section {
   #performance-information {
     min-height: 80vh;
   }
+
   #living-room {
     min-height: 80vh;
   }
@@ -799,9 +834,11 @@ main>section {
     height: 500px;
     margin-bottom: 2rem;
   }
-  #contact-information .map iframe{
+
+  #contact-information .map iframe {
     height: 100%;
   }
+
   #contact-information .icons {
     position: static;
     align-self: flex-end;
@@ -817,21 +854,30 @@ main>section {
   #living-room .big-room img {
     transform: translate(-20%, 20%) scale(3.5);
   }
-  .back-to-top{
-    width: 150px;
+  .back-to-top-effectBox{
+    width: 250px;
+    height: 200px;
   }
-  #living-room .rooms .openBtn{
+  .back-to-top {
+    width: 150px;
+    right: -50px;
+  }
+
+  #living-room .rooms .openBtn {
     outline: 10px solid var(--main-decorate-color);
   }
-  #living-room .rooms .openBtn p{
+
+  #living-room .rooms .openBtn p {
     font-size: 1rem;
   }
 }
-@media (max-width: 862px){
+
+@media (max-width: 862px) {
   #living-room .rooms.mblong {
     margin-bottom: 800px;
   }
 }
+
 @media (max-width: 768px) {
   .banner {
     background-size: 280%;
@@ -877,9 +923,11 @@ main>section {
   #living-room {
     min-height: 50vh;
   }
-  #living-room .rooms .openBtn{
+
+  #living-room .rooms .openBtn {
     padding: 1rem;
   }
+
   #living-room .room {
     flex-flow: column;
   }
@@ -977,123 +1025,158 @@ main>section {
   :root {
     --web-side-padding-x: 32px;
   }
-  #contact-information{
+
+  #contact-information {
     padding: 100px var(--web-side-padding-y);
   }
+
   #contact-information .borderPic {
     width: calc(100% - 64px);
     left: 32px;
   }
 }
-@media(max-width:576px){
-  .back-to-top{
+
+@media(max-width:576px) {
+  .back-to-top-effectBox{
+    width: 120px;
+    height: 120px;
+  }
+  .back-to-top {
     width: 100px;
   }
-  h1{
+
+  h1 {
     font-size: 3rem;
   }
-  #about-seety .container p{
+
+  #about-seety .container p {
     font-size: 1.5rem;
   }
-  h5{
+
+  h5 {
     font-size: 1.5rem;
   }
-  h6{
+
+  h6 {
     font-size: 20px;
   }
+
   .banner {
     background-size: 500%;
     background-position: 73% 25%;
     background-origin: right;
   }
-  #living-room .rooms{
+
+  #living-room .rooms {
     margin-bottom: 900px;
   }
-  #living-room .rooms .openBtn{
+
+  #living-room .rooms .openBtn {
     opacity: 0;
   }
-  #living-room .big-room{
+
+  #living-room .big-room {
     transform: translateY(110%);
   }
-  
-  #living-room .room .roomImg{
+
+  #living-room .room .roomImg {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     width: 100%;
   }
-  #living-room .room article{
+
+  #living-room .room article {
     position: static;
     transform: scaleY(1);
     opacity: 1;
   }
 }
 
-@media(max-width:480px){
-  h1{
+@media(max-width:480px) {
+  h1 {
     font-size: 2rem;
   }
-  #about-seety .decorate-cloud{
+
+  #about-seety .decorate-cloud {
     min-width: 250px;
   }
-  #about-seety{
+
+  #about-seety {
     padding-bottom: 0;
     min-height: auto;
   }
-  #about-seety .container p{
+
+  #about-seety .container p {
     font-size: 1rem;
-    line-height:2rem;
+    line-height: 2rem;
   }
-  #about-seety .text-n-controller{
+
+  #about-seety .text-n-controller {
     gap: 1rem;
   }
-  #performance-information{
+
+  #performance-information {
     padding-bottom: 20px;
     min-height: auto;
   }
-  #living-room{
+
+  #living-room {
     min-height: auto;
   }
-  #living-room .rooms{
-    margin-bottom:700px;
+
+  #living-room .rooms {
+    margin-bottom: 700px;
   }
-  #living-room .rooms.mblong{
-    margin-bottom:700px;
+
+  #living-room .rooms.mblong {
+    margin-bottom: 700px;
   }
-  #living-room .room article h3{
+
+  #living-room .room article h3 {
     margin-bottom: 0;
   }
-  h3{
+
+  h3 {
     font-size: 2rem;
   }
+
   #living-room .room article p {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
-  h5{
+
+  h5 {
     font-size: 1.5rem;
     margin-bottom: 0;
   }
-  h6{
+
+  h6 {
     font-size: 20px;
   }
-  .section-title{
+
+  .section-title {
     margin-bottom: calc(var(--web-side-padding-y) / 2);
   }
-  #performance-information .section-title h1::after{
+
+  #performance-information .section-title h1::after {
     width: 125%;
     height: 10px;
   }
-  #performance-information .section-title div{
+
+  #performance-information .section-title div {
     height: 30px;
     font-size: 2rem;
     line-height: 2rem;
   }
-  #contact-information .section-title{
+
+  #contact-information .section-title {
     margin-bottom: 1rem;
   }
-  #contact-information .info{
+
+  #contact-information .info {
     gap: 1rem;
   }
 }
+
 @keyframes appear {
   0% {
     transform: translateY(-100%);

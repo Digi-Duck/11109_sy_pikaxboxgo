@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div id="svgPic">
+    <!-- <div id="svgPic">
         <svg viewBox="0 0 1772.000000 203.000000" preserveAspectRatio="xMidYMid meet">
 
             <g transform="translate(0.000000,203.000000) scale(0.100000,-0.100000)" fill="transparent" stroke="#000"
@@ -50,7 +50,7 @@
 -100z" />
             </g>
         </svg>
-    </div>
+    </div> -->
 
     <header>
         <section class="banner">
@@ -86,9 +86,11 @@
             </li>
         </ul>
     </nav>
-    <a href="#" class="back-to-top">
-        <img src="../../img/01-header/back-to-top.png" alt="">
-    </a>
+    <div class="back-to-top-effectBox">
+        <a href="#" class="back-to-top" style="transform: translateX(-50%);">
+            <img src="../../img/01-header/back-to-top.png" alt="">
+        </a>
+    </div>
 
     <main>
         <section id="about-seety">
@@ -227,6 +229,16 @@
                             <div class="swiper-slide">
                                 <div class="performance-information-card">
                                     <img src="../../img/03-performance/show/6.jpg" alt="">
+                                    <span></span>
+                                    <small>
+                                        zoom up !
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="performance-information-card">
+                                    <img src="../../img/03-performance/show/see more.png" alt="">
                                     <span></span>
                                     <small>
                                         zoom up !
@@ -377,7 +389,7 @@
                 nextEl: ".fa-forward-step",
             },
         });
-        console.log(swiper);
+
         const play = document.querySelector('.fa-play');
         play.addEventListener('click', () => {
             swiper.forEach(e => {
