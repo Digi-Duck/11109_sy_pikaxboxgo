@@ -55,7 +55,7 @@
     "image": "https://lh3.googleusercontent.com/p/AF1QipPMTYCSyZYnaHpoKU8V0lhvRsIW8bTxQKZSrnR2=w600-h0",
     "exhibitionName": "音遊 Halletsu with Sobobuki 台灣巡演 2019",
     "performer": [""],
-    "performerDescription": null,
+    "performerDescription": "",
     "date": {
       "begin": "2019,11,15",
       "end": "2019,11,15"
@@ -76,7 +76,7 @@
       "</br>貝斯: David Ambrosio (New York, USA) ",
       "</br>爵士鼓: Satoshi Takeishi (New York, USA)"
     ],
-    "performerDescription": null,
+    "performerDescription": "",
     "date": {
       "begin": "2019,11,14",
       "end": "2019,11,14"
@@ -93,7 +93,7 @@
     "image": "https://lh3.googleusercontent.com/p/AF1QipNjA9DaXt7Ikw8ZNSoImLWs91bh79RmAa2vnxXI=w600-h0",
     "exhibitionName": "The island 序 - 不插電台灣巡迴",
     "performer": ["「The island」序"],
-    "performerDescription": null,
+    "performerDescription": "",
     "date": {
       "begin": "2019,10,12",
       "end": "2019,10,12"
