@@ -23,6 +23,9 @@ window.addEventListener('click', () => {
 });
 
 let showArr = [];
+const time = (time) => {
+  return `${time.split(',')[3]} : ${time.split(',')[4]}`;
+};
 
 const dataObj = async function () {
   const response = await fetch('./dev-data/data.json').then();
@@ -38,24 +41,29 @@ const dataObj = async function () {
             <div class="content-area">
               <h1>${data.exhibitionName}</h1>
               <h4>表演者 : ${data.performer}</h4>
-              <p>${data.performerDescription}</p>
+              <p>${data.performerDescription} </p>
               <p>${data.date.begin
                 .replace(',', '年')
                 .replace(',', '月')
-                .concat('日')}</p>
+                .concat('日')} &ensp;&ensp;&ensp;入場時間 : ${time(
+      data.enterTime.from
+    )} 到 ${time(data.enterTime.to)}</p>
               <p>${data.description}</p>
             </div>
     `);
-    renderContent.innerHTML += `<figure class="information-card"><span id="anchor-${
-      data.id
-    }" class="anchor"></span><div class="container"><div class="image-area"><img src="${
+    renderContent.innerHTML += `<figure class="information-card"><div class="container"><div class="image-area"><img src="${
       data.image
     }" alt="圖"></div><div class="content-area"><h1>${
       data.exhibitionName
-    }</h1><h4>表演者 : ${data.performer}</h4><p>${data.date.begin
+    }</h1><h4>表演者 : ${data.performer}</h4><p>日期 : ${data.date.begin
       .replace(',', '年')
       .replace(',', '月')
-      .concat('日')}</p><button data-id="${
+      .concat('日')}</p>
+      <p>入場時間 : ${time(data.enterTime.from)} 到 ${time(
+      data.enterTime.to
+    )}</p>
+    <p>票價 : ${data.ticketPrice}</p>
+    <button data-id="${
       data.id
     }"class="alink">詳細資訊</button></div></div></figure>`;
   });
