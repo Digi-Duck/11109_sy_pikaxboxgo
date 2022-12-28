@@ -6,6 +6,7 @@ const roomImg = document.querySelectorAll('.roomImg');
 const saturn = document.querySelector('.back-to-top');
 const banner = document.querySelector('.banner');
 const roomArticle = document.querySelectorAll('.room article');
+const openBtn = document.querySelector('.openBtn');
 
 
 
@@ -15,7 +16,7 @@ listBar.addEventListener('click', () => {
 
 roomImg.forEach(img => {
   img.addEventListener('click', () => {
-    console.log(1);
+    openBtn.classList.toggle('noshow');
     place.classList.toggle('show');
     rooms.classList.toggle('mblong');
     roomArticle.forEach(room => {
@@ -100,3 +101,5 @@ navListTag.forEach(tag =>{
     list.classList.remove('show')
   })
 })
+
+

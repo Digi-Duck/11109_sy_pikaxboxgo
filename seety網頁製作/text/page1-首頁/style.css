@@ -77,7 +77,7 @@ header {
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: url('../../img/更新的檔/00-header/banner\ background.JPG');
+  background-image: url('../../img/01-header/banner\ background.JPG');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -94px;
@@ -122,12 +122,14 @@ nav ul {
 }
 
 nav li {
+  width: 100%;
   font-size: 1.5vw;
   font-weight: 700;
   line-height: 1.5vw;
   background-color: var(--main-decorate-color);
   padding: 10px 16px;
   border-radius: 15px;
+  text-align: center;
 }
 
 nav .more {
@@ -293,7 +295,18 @@ main>section {
   color: var(--sub-decorate-color);
   position: relative;
 }
-
+#about-seety .controller span{
+  width: 40px;
+}
+#about-seety .controller>i {
+  transition: transform 0.2s linear;
+}
+#about-seety .controller .fa-backward-step:active{
+  transform: translateX(-10px);
+}
+#about-seety .controller .fa-forward-step:active{
+  transform: translateX(10px);
+}
 .swiper-button-next.abSwiper::after {
   content: '';
 }
@@ -302,10 +315,12 @@ main>section {
   content: '';
 }
 
-#about-seety .fa-play {
+#about-seety :is(.fa-play , .fa-pause) {
   color: var(--main-decorate-color);
 }
-
+#about-seety .switch{
+  display: none;
+}
 #about-seety .controller::before {
   content: 'Click !';
   font-size: 2rem;
@@ -337,6 +352,7 @@ main>section {
   background-size: cover;
   min-height: 100vh;
   position: relative;
+  overflow: visible;
 }
 
 #performance-information .section-title {
@@ -412,6 +428,7 @@ main>section {
 #performance-information .swiper {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 #performance-information .swiper-slide {
@@ -439,12 +456,17 @@ main>section {
   height: 100%;
   object-fit: cover;
 }
-
+#performance-information .arrow{
+  width: 15%;
+  position: absolute;
+  right: 200px;
+  bottom: 50px;
+}
 #performance-information .sound-effect {
   width: 25%;
   min-width: 300px;
   position: absolute;
-  bottom: 3rem;
+  top: 87%;
   mix-blend-mode: multiply;
 }
 
@@ -464,7 +486,34 @@ main>section {
   position: relative;
   transition: margin-bottom 1s;
 }
-
+#living-room .rooms .openBtn{
+  background-color: var(--main-bg-color);
+  aspect-ratio: 1;
+  width: 25%;
+  border-radius: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  outline: 20px solid var(--main-decorate-color);
+  outline-offset: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+#living-room .rooms .noshow{
+  opacity: 0;
+}
+#living-room .rooms .openBtn p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--main-decorate-color);
+  letter-spacing: 8px;
+}
 #living-room .room {
   display: flex;
   gap: 3rem;
@@ -656,6 +705,7 @@ main>section {
 }
 
 #contact-information .map {
+  transform: translateY(50px);
   width: 100%;
 }
 
@@ -714,7 +764,6 @@ main>section {
   #performance-information {
     min-height: 80vh;
   }
-
   #living-room {
     min-height: 80vh;
   }
@@ -750,7 +799,9 @@ main>section {
     height: 500px;
     margin-bottom: 2rem;
   }
-
+  #contact-information .map iframe{
+    height: 100%;
+  }
   #contact-information .icons {
     position: static;
     align-self: flex-end;
@@ -768,6 +819,12 @@ main>section {
   }
   .back-to-top{
     width: 150px;
+  }
+  #living-room .rooms .openBtn{
+    outline: 10px solid var(--main-decorate-color);
+  }
+  #living-room .rooms .openBtn p{
+    font-size: 1rem;
   }
 }
 @media (max-width: 862px){
@@ -820,7 +877,9 @@ main>section {
   #living-room {
     min-height: 50vh;
   }
-
+  #living-room .rooms .openBtn{
+    padding: 1rem;
+  }
   #living-room .room {
     flex-flow: column;
   }
@@ -950,9 +1009,13 @@ main>section {
   #living-room .rooms{
     margin-bottom: 900px;
   }
+  #living-room .rooms .openBtn{
+    opacity: 0;
+  }
   #living-room .big-room{
     transform: translateY(110%);
   }
+  
   #living-room .room .roomImg{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     width: 100%;
