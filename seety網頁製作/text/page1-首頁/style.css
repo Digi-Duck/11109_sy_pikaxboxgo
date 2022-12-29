@@ -23,7 +23,6 @@ h5 {
 
 h6 {
   font-size: 1.5rem;
-  font-weight: normal;
 }
 
 p {
@@ -158,9 +157,7 @@ nav .more {
   top: -5px;
   right: -70px;
   transform-origin: 100px 0;
-  transition: transform 0.2s;
-  display: grid;
-  grid-template-columns: ;
+  transition: transform 0.5s;
 }
 
 .back-to-top img {
