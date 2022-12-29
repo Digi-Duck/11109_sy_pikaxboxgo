@@ -26,7 +26,12 @@ window.addEventListener('scroll', () => {
     saturn.classList.add('appear');
   } else {
     saturn.classList.remove('appear');
+    saturn.classList.remove('disappear');
   }
+});
+
+saturn.addEventListener('click', () => {
+  saturn.classList.add('disappear');
 });
 
 window.addEventListener('click', () => {
