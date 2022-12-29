@@ -105,22 +105,23 @@ nav li {
     height: 90vh;
     flex-flow: column;
     text-align: end;
-    background-color: var(--main-decorate-color);
+    background-color: var(--main-bg-color);
     padding: 1rem 0.5rem 1rem 2rem;
     z-index: 1;
-    a {
-      text-align: center;
-    }
   }
 
   nav li:not(.more) {
     background-color: transparent;
-    background-image: url('../../img/更新的檔/00-header/nav-list-background.png');
+    background-image: url('../../img/01-header/nav-list-background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 50%;
     padding: 1rem;
     font-size: 1.5rem;
+  }
+
+  nav .list a {
+    text-align: center;
   }
 
   nav .more {
@@ -129,11 +130,12 @@ nav li {
 
   nav ul .list {
     display: none;
-    &.show {
-      display: flex;
-      flex-flow: column;
-      gap: 2rem;
-    }
+  }
+
+  nav ul .list.show {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
   }
 }
 @media (max-width: 960px) {
@@ -145,11 +147,12 @@ nav li {
 .block-all {
   display: none;
   width: 70%;
-  height: 65vh;
+  height: 750px;
   transform: translate(-50%, -50%);
   position: fixed;
   inset: 50% auto auto 50%;
   z-index: 3;
+
   &.show {
     display: block;
     box-shadow: 0 0 200px 70px black;
@@ -167,9 +170,22 @@ nav li {
       display: flex;
       flex-direction: column;
       padding: 15px;
-      h1 {
-        margin: 10px 0px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #ffc0cb;
       }
+      &::-webkit-scrollbar {
+        width: 3px;
+        background-color: black;
+      }
+      h1 {
+        font-size: large;
+        margin: 20px 5px;
+      }
+      // h1 {
+      //   margin: 10px 0px;
+      // }
       h4 {
         margin: 10px 0;
       }
@@ -178,9 +194,59 @@ nav li {
         margin: 10px;
       }
     }
+    @media (max-width: 1288px) {
+      width: 80%;
+      .image-area {
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.637),
+          rgba(202, 202, 202, 0.171)
+        );
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+      .content-area {
+        padding: 0 55px 30px;
+        h4 {
+          margin: 10px 0;
+        }
+      }
+    }
+    @media (max-width: 1035px) {
+      flex-direction: column;
+
+      .content-area {
+        width: 100%;
+        height: 50%;
+      }
+      .image-area {
+        width: 100%;
+        height: 50%;
+      }
+    }
+    @media (max-width: 768px) {
+      .content-area {
+        padding: 0 35px 30px;
+        height: 60%;
+      }
+      .image-area {
+        height: 40%;
+      }
+    }
+    @media (max-width: 468px) {
+      .content-area {
+        padding: 0 20px 30px;
+        height: 70%;
+      }
+      .image-area {
+        height: 30%;
+      }
+    }
   }
 }
-
 #render {
   margin: 10vh 0;
   padding: 0 150px;
