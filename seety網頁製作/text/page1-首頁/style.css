@@ -28,7 +28,6 @@ h6 {
 p {
   font-size: 1rem;
   font-weight: 700;
-
 }
 
 :root {
@@ -70,7 +69,6 @@ header {
   height: 90vh;
   display: flex;
   flex-flow: column;
-
 }
 
 .banner {
@@ -174,10 +172,10 @@ nav .more {
 
 /* main */
 main {
-  background: linear-gradient(#432C2C, #A99F9F);
+  background: linear-gradient(#432c2c, #a99f9f);
 }
 
-main>section {
+main > section {
   overflow: hidden;
 }
 
@@ -230,7 +228,15 @@ main>section {
   bottom: 0;
   z-index: 2;
   opacity: 0.5;
-  clip-path: polygon(0% 0%, 30% 0%, 35% 25%, 60% 50%, 100% 60%, 100% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 0%,
+    30% 0%,
+    35% 25%,
+    60% 50%,
+    100% 60%,
+    100% 100%,
+    0% 100%
+  );
 }
 
 #about-seety .about-info {
@@ -317,7 +323,7 @@ main>section {
   width: 40px;
 }
 
-#about-seety .controller>i {
+#about-seety .controller > i {
   transition: transform 0.2s linear;
 }
 
@@ -706,7 +712,7 @@ main>section {
   position: absolute;
 }
 
-#contact-information .section-content>section {
+#contact-information .section-content > section {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -718,7 +724,7 @@ main>section {
   gap: 1.8rem;
 }
 
-#contact-information .info>* {
+#contact-information .info > * {
   line-height: 2rem;
 }
 
@@ -791,7 +797,6 @@ main>section {
     gap: 2rem;
   }
 
-
   #performance-information {
     min-height: 80vh;
   }
@@ -851,7 +856,7 @@ main>section {
   #living-room .big-room img {
     transform: translate(-20%, 20%) scale(3.5);
   }
-  .back-to-top-effectBox{
+  .back-to-top-effectBox {
     width: 250px;
     height: 200px;
   }
@@ -1004,7 +1009,7 @@ main>section {
     padding: 40px calc(var(--web-side-padding-x) / 2);
   }
 
-  #contact-information .section-content> :nth-child(1) {
+  #contact-information .section-content > :nth-child(1) {
     width: 100%;
   }
 
@@ -1015,10 +1020,9 @@ main>section {
   #contact-information .map iframe {
     width: 100%;
   }
-
 }
 
-@media(max-width:660px) {
+@media (max-width: 660px) {
   :root {
     --web-side-padding-x: 32px;
   }
@@ -1033,8 +1037,8 @@ main>section {
   }
 }
 
-@media(max-width:576px) {
-  .back-to-top-effectBox{
+@media (max-width: 576px) {
+  .back-to-top-effectBox {
     width: 120px;
     height: 120px;
   }
@@ -1088,7 +1092,7 @@ main>section {
   }
 }
 
-@media(max-width:480px) {
+@media (max-width: 480px) {
   h1 {
     font-size: 2rem;
   }

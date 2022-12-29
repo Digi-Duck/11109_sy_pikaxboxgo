@@ -1,8 +1,23 @@
 const banner = document.querySelector('.banner');
 const saturn = document.querySelector('.back-to-top');
 const blockAll = document.querySelector('.block-all');
+const listBar = document.querySelector('nav .more');
+const list = document.querySelector('nav .list');
 
 // functions
+
+listBar.addEventListener('click', () => {
+  list.classList.toggle('show');
+});
+const navListTag = document.querySelectorAll('nav .list a');
+
+navListTag.forEach((tag) => {
+  tag.addEventListener('click', () => {
+    console.log(1);
+    list.classList.remove('show');
+  });
+});
+
 window.addEventListener('scroll', () => {
   let scrollHeight = parseInt(window.scrollY);
   let bannerHeight = parseInt(banner.offsetHeight);
@@ -11,7 +26,12 @@ window.addEventListener('scroll', () => {
     saturn.classList.add('appear');
   } else {
     saturn.classList.remove('appear');
+    saturn.classList.remove('disappear');
   }
+});
+
+saturn.addEventListener('click', () => {
+  saturn.classList.add('disappear');
 });
 
 window.addEventListener('click', () => {
