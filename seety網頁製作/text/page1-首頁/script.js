@@ -11,10 +11,8 @@ const openBtn = document.querySelector('.openBtn');
 
 
 
-listBar.addEventListener('click', () => {
-  list.classList.toggle('show');
-});
 
+// venue animation
 roomImg.forEach(img => {
   img.addEventListener('click', () => {
     openBtn.classList.toggle('noshow');
@@ -29,7 +27,7 @@ roomImg.forEach(img => {
   });
 })
 
-
+// title fade in animation
 let observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -47,6 +45,7 @@ titles.forEach((title) => {
   observer.observe(title);
 });
 
+// star show
 window.addEventListener('scroll', () => {
   let scrollY = parseInt(window.scrollY);
   let bannerHeight = parseInt(banner.offsetHeight);
@@ -57,18 +56,27 @@ window.addEventListener('scroll', () => {
   }
 });
 
-saturn.addEventListener('mousemove', e => {
-  let rotateDeg = e.clientX - saturn.offsetLeft - saturnObj.offsetLeft;
-  if (rotateDeg < 0) {
-    saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 - 45}deg);`
+
+// star move
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    return;
   } else {
-    saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 + 45}deg);`
+    saturn.addEventListener('mousemove', e => {
+      let rotateDeg = e.clientX - saturn.offsetLeft - saturnObj.offsetLeft;
+      if (rotateDeg < 0) {
+        saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 - 45}deg);`
+      } else {
+        saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 + 45}deg);`
+      }
+    })
+
+    saturn.addEventListener('mouseleave', () => {
+      saturnObj.style = `transform: translateX(-50%) rotate(0deg);`
+    })
   }
 })
 
-saturn.addEventListener('mouseleave', () => {
-  saturnObj.style = `transform: translateX(-50%) rotate(0deg);`
-})
 
 
 
@@ -76,6 +84,7 @@ saturn.addEventListener('mouseleave', () => {
 
 
 
+// loading page
 const paths = document.querySelectorAll('#svgPic path')
 
 for (let i = 0; i < paths.length; i++) {
@@ -112,14 +121,20 @@ window.onload = () => {
 }
 
 
-
+// nav toggle
 const navListTag = document.querySelectorAll('nav .list a');
 
+
+listBar.addEventListener('click', () => {
+  list.classList.toggle('show');
+});
 navListTag.forEach(tag => {
   tag.addEventListener('click', () => {
     console.log(1);
     list.classList.remove('show')
   })
 })
+
+
 
 

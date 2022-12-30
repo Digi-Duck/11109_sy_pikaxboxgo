@@ -835,6 +835,7 @@ main > section {
   #contact-information .map {
     height: 500px;
     margin-bottom: 2rem;
+    transform: translateY(0px);
   }
 
   #contact-information .map iframe {
