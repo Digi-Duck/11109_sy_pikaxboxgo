@@ -175,7 +175,7 @@ main {
   background: linear-gradient(#432c2c, #a99f9f);
 }
 
-main > section {
+main>section {
   overflow: hidden;
 }
 
@@ -228,15 +228,13 @@ main > section {
   bottom: 0;
   z-index: 2;
   opacity: 0.5;
-  clip-path: polygon(
-    0% 0%,
-    30% 0%,
-    35% 25%,
-    60% 50%,
-    100% 60%,
-    100% 100%,
-    0% 100%
-  );
+  clip-path: polygon(0% 0%,
+      30% 0%,
+      35% 25%,
+      60% 50%,
+      100% 60%,
+      100% 100%,
+      0% 100%);
 }
 
 #about-seety .about-info {
@@ -323,7 +321,7 @@ main > section {
   width: 40px;
 }
 
-#about-seety .controller > i {
+#about-seety .controller>i {
   transition: transform 0.2s linear;
 }
 
@@ -712,7 +710,7 @@ main > section {
   position: absolute;
 }
 
-#contact-information .section-content > section {
+#contact-information .section-content>section {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -724,7 +722,7 @@ main > section {
   gap: 1.8rem;
 }
 
-#contact-information .info > * {
+#contact-information .info>* {
   line-height: 2rem;
 }
 
@@ -857,10 +855,12 @@ main > section {
   #living-room .big-room img {
     transform: translate(-20%, 20%) scale(3.5);
   }
+
   .back-to-top-effectBox {
     width: 250px;
     height: 200px;
   }
+
   .back-to-top {
     width: 150px;
     right: -50px;
@@ -879,336 +879,341 @@ main > section {
   #living-room .rooms.mblong {
     margin-bottom: 800px;
   }
-}
-
-@media (max-width: 768px) {
-  .banner {
-    background-size: 280%;
-    background-position: 85% 0px;
-    background-origin: right;
-  }
-
-  .banner .logo {
-    width: 250px;
-    top: 40%;
-    left: 10%;
-  }
-
-  #about-seety {
-    padding-bottom: 100px;
-  }
-
-  #about-seety .imgSwiper {
-    display: none;
-  }
-
-  #about-seety .text-n-controller {
-    padding: 0;
-  }
-
-  #about-seety .text-n-controller .imgSwiper {
-    display: block;
-    width: 100%;
-  }
-
-  #performance-information {
-    padding-bottom: 100px;
-  }
-
-  #performance-information .section-title h1::after {
-    width: 120%;
-  }
-
-  #performance-information .section-title div {
-    padding-right: 1rem;
-  }
-
-  #living-room {
-    min-height: 50vh;
-  }
-
-  #living-room .rooms .openBtn {
-    padding: 1rem;
-  }
-
-  #living-room .room {
-    flex-flow: column;
-  }
-
-  #living-room .rooms.mblong {
-    margin-bottom: 900px;
-  }
-
-  #living-room .big-room {
-    align-items: flex-end;
-  }
-
-  #living-room .room .roomImg {
-    transition: clip-path 1s, width 1s;
-  }
-
-  #living-room .room .roomImg.show {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    width: 100%;
-  }
-
-  #living-room .room article {
-    position: absolute;
-    width: 100%;
-    transform: scaleY(0);
-  }
-
-  #living-room .room article.show {
-    position: static;
-    transform: scaleY(1);
-  }
-
-  #living-room .small-room article p {
-    position: relative;
-    left: 0px;
-  }
-
-  #living-room .small-room article .btns {
-    position: relative;
-    left: 0px;
-  }
-
-  #living-room .big-room article h3 {
-    position: relative;
-    right: 0px;
-  }
-
-  #living-room .big-room article p {
-    position: relative;
-    right: 0px;
-  }
-
-  #living-room .small-room article {
-    transform-origin: top;
-  }
-
-  #living-room .big-room article {
-    transform-origin: top;
-  }
-
-  #living-room .big-room .roomImg {
-    order: 0;
-  }
-
-  #contact-information {
-    padding: var(--web-side-padding-x) var(--web-side-padding-y);
-  }
-
-  #contact-information .borderPic {
-    width: calc(100% - 100px);
-    left: 50px;
-  }
-
-  #contact-information .section-content {
-    flex-flow: column;
-    align-items: center;
-    padding: 40px calc(var(--web-side-padding-x) / 2);
-  }
-
-  #contact-information .section-content > :nth-child(1) {
-    width: 100%;
-  }
-
-  #contact-information .map {
-    width: 100%;
-  }
-
-  #contact-information .map iframe {
-    width: 100%;
-  }
-}
-
-@media (max-width: 660px) {
-  :root {
-    --web-side-padding-x: 32px;
-  }
-
-  #contact-information {
-    padding: 100px var(--web-side-padding-y);
-  }
-
-  #contact-information .borderPic {
-    width: calc(100% - 64px);
-    left: 32px;
-  }
-}
-
-@media (max-width: 576px) {
-  .back-to-top-effectBox {
-    width: 120px;
-    height: 120px;
-  }
-  .back-to-top {
-    width: 100px;
-  }
 
-  h1 {
-    font-size: 3rem;
-  }
-
-  #about-seety .container p {
-    font-size: 1.5rem;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-  }
-
-  h6 {
-    font-size: 20px;
-  }
-
-  .banner {
-    background-size: 500%;
-    background-position: 73% 25%;
-    background-origin: right;
-  }
-
-  #living-room .rooms {
-    margin-bottom: 900px;
-  }
-
-  #living-room .rooms .openBtn {
-    opacity: 0;
-  }
-
-  #living-room .big-room {
-    transform: translateY(110%);
-  }
-
-  #living-room .room .roomImg {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    width: 100%;
-  }
-
-  #living-room .room article {
-    position: static;
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  #about-seety .decorate-cloud {
-    min-width: 250px;
-  }
-
-  #about-seety {
-    padding-bottom: 0;
-    min-height: auto;
-  }
-
-  #about-seety .container p {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
-  #about-seety .text-n-controller {
-    gap: 1rem;
-  }
-
-  #performance-information {
-    padding-bottom: 20px;
-    min-height: auto;
-  }
-
-  #living-room {
-    min-height: auto;
-  }
-
-  #living-room .rooms {
-    margin-bottom: 700px;
-  }
-
-  #living-room .rooms.mblong {
-    margin-bottom: 700px;
-  }
-
-  #living-room .room article h3 {
-    margin-bottom: 0;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  #living-room .room article p {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
-
-  h6 {
-    font-size: 20px;
-  }
-
-  .section-title {
-    margin-bottom: calc(var(--web-side-padding-y) / 2);
-  }
-
-  #performance-information .section-title h1::after {
-    width: 125%;
-    height: 10px;
-  }
-
-  #performance-information .section-title div {
-    height: 30px;
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-
-  #contact-information .section-title {
-    margin-bottom: 1rem;
-  }
-
-  #contact-information .info {
-    gap: 1rem;
-  }
-}
-
-@keyframes appear {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  40% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-25%);
-  }
-
-  60% {
-    transform: translateY(-33%);
-  }
-
-  70% {
-    transform: translateY(-25%);
-  }
-
-  80% {
-    transform: translateY(0);
-  }
-
-  90% {
-    transform: translateY(-10%);
-  }
 
-  100% {
-    transform: translateY(0);
+  @media (max-width: 768px) {
+    .banner {
+      background-size: 280%;
+      background-position: 85% 0px;
+      background-origin: right;
+    }
+
+    .banner .logo {
+      width: 250px;
+      top: 40%;
+      left: 10%;
+    }
+
+    #about-seety {
+      padding-bottom: 100px;
+    }
+
+    #about-seety .imgSwiper {
+      display: none;
+    }
+
+    #about-seety .text-n-controller {
+      padding: 0;
+    }
+
+    #about-seety .text-n-controller .imgSwiper {
+      display: block;
+      width: 100%;
+    }
+
+    #performance-information {
+      padding-bottom: 100px;
+    }
+
+    #performance-information .section-title h1::after {
+      width: 120%;
+    }
+
+    #performance-information .section-title div {
+      padding-right: 1rem;
+    }
+
+    #performance-information .arrow {
+      right: calc(var(--web-side-padding-x) + 5%);
+    }
+
+    #living-room {
+      min-height: 50vh;
+    }
+
+    #living-room .rooms .openBtn {
+      padding: 1rem;
+    }
+
+    #living-room .room {
+      flex-flow: column;
+    }
+
+    #living-room .rooms.mblong {
+      margin-bottom: 900px;
+    }
+
+    #living-room .big-room {
+      align-items: flex-end;
+    }
+
+    #living-room .room .roomImg {
+      transition: clip-path 1s, width 1s;
+    }
+
+    #living-room .room .roomImg.show {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      width: 100%;
+    }
+
+    #living-room .room article {
+      position: absolute;
+      width: 100%;
+      transform: scaleY(0);
+    }
+
+    #living-room .room article.show {
+      position: static;
+      transform: scaleY(1);
+    }
+
+    #living-room .small-room article p {
+      position: relative;
+      left: 0px;
+    }
+
+    #living-room .small-room article .btns {
+      position: relative;
+      left: 0px;
+    }
+
+    #living-room .big-room article h3 {
+      position: relative;
+      right: 0px;
+    }
+
+    #living-room .big-room article p {
+      position: relative;
+      right: 0px;
+    }
+
+    #living-room .small-room article {
+      transform-origin: top;
+    }
+
+    #living-room .big-room article {
+      transform-origin: top;
+    }
+
+    #living-room .big-room .roomImg {
+      order: 0;
+    }
+
+    #contact-information {
+      padding: var(--web-side-padding-x) var(--web-side-padding-y);
+    }
+
+    #contact-information .borderPic {
+      width: calc(100% - 100px);
+      left: 50px;
+    }
+
+    #contact-information .section-content {
+      flex-flow: column;
+      align-items: center;
+      padding: 40px calc(var(--web-side-padding-x) / 2);
+    }
+
+    #contact-information .section-content> :nth-child(1) {
+      width: 100%;
+    }
+
+    #contact-information .map {
+      width: 100%;
+    }
+
+    #contact-information .map iframe {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 660px) {
+    :root {
+      --web-side-padding-x: 32px;
+    }
+
+    #contact-information {
+      padding: 100px var(--web-side-padding-y);
+    }
+
+    #contact-information .borderPic {
+      width: calc(100% - 64px);
+      left: 32px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .back-to-top-effectBox {
+      width: 120px;
+      height: 120px;
+    }
+
+    .back-to-top {
+      width: 100px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    #about-seety .container p {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+
+    h6 {
+      font-size: 20px;
+    }
+
+    .banner {
+      background-size: 500%;
+      background-position: 73% 25%;
+      background-origin: right;
+    }
+
+    #living-room .rooms {
+      margin-bottom: 900px;
+    }
+
+    #living-room .rooms .openBtn {
+      opacity: 0;
+    }
+
+    #living-room .big-room {
+      transform: translateY(110%);
+    }
+
+    #living-room .room .roomImg {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      width: 100%;
+    }
+
+    #living-room .room article {
+      position: static;
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    #about-seety .decorate-cloud {
+      min-width: 250px;
+    }
+
+    #about-seety {
+      padding-bottom: 0;
+      min-height: auto;
+    }
+
+    #about-seety .container p {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+    #about-seety .text-n-controller {
+      gap: 1rem;
+    }
+
+    #performance-information {
+      padding-bottom: 20px;
+      min-height: auto;
+    }
+
+    #living-room {
+      min-height: auto;
+    }
+
+    #living-room .rooms {
+      margin-bottom: 700px;
+    }
+
+    #living-room .rooms.mblong {
+      margin-bottom: 700px;
+    }
+
+    #living-room .room article h3 {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    #living-room .room article p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    h6 {
+      font-size: 20px;
+    }
+
+    .section-title {
+      margin-bottom: calc(var(--web-side-padding-y) / 2);
+    }
+
+    #performance-information .section-title h1::after {
+      width: 125%;
+      height: 10px;
+    }
+
+    #performance-information .section-title div {
+      height: 30px;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    #contact-information .section-title {
+      margin-bottom: 1rem;
+    }
+
+    #contact-information .info {
+      gap: 1rem;
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    40% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-25%);
+    }
+
+    60% {
+      transform: translateY(-33%);
+    }
+
+    70% {
+      transform: translateY(-25%);
+    }
+
+    80% {
+      transform: translateY(0);
+    }
+
+    90% {
+      transform: translateY(-10%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
-}
