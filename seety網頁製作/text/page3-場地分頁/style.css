@@ -57,10 +57,16 @@ nav li {
     border-radius: 15px;
 }
 
+nav .list li:hover {
+    outline: 3px solid var(--main-decorate-color);
+    outline-offset: 3px;
+}
+
 nav .more {
     display: none;
 }
-nav button{
+
+nav button {
     background-color: transparent;
     border: 0;
     font-size: 1.5vw;
@@ -70,6 +76,7 @@ nav button{
     padding: 10px 16px;
     border-radius: 15px;
 }
+
 .back-to-top {
     display: none;
     width: 200px;
@@ -331,13 +338,13 @@ nav button{
         flex-flow: column;
         text-align: end;
         background-color: var(--main-bg-color);
-        padding: 1rem 0.5rem 1rem 2rem;
+        padding: 1rem calc(var(--web-side-padding-x)/2);
         z-index: 1;
     }
 
     nav li:not(.more) {
         background-color: transparent;
-        background-image: url('../../img/更新的檔/00-header/nav-list-background.png');
+        background-image: url('../../img/01-header/nav-list-background.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 0 50%;
@@ -362,25 +369,32 @@ nav button{
         flex-flow: column;
         gap: 2rem;
     }
-    .room .info-content{
+
+    .room .info-content {
         font-size: 1.25rem;
     }
-    .bass .info{
+
+    .bass .info {
         inset: -60% auto auto -50%;
     }
-    .bass .info::after{
+
+    .bass .info::after {
         height: 70px;
     }
-    .mic .info{
+
+    .mic .info {
         inset: -60% auto auto -250%;
     }
-    .drum .info::after{
+
+    .drum .info::after {
         height: 0;
     }
-    .eg .info{
+
+    .eg .info {
         inset: -70% -50% auto auto;
     }
-    .eg .info::after{
+
+    .eg .info::after {
         height: 50px;
         right: 60%;
     }
@@ -390,24 +404,30 @@ nav button{
     .back-to-top {
         width: 150px;
     }
-    .room .info-content{
+
+    .room .info-content {
         font-size: 1rem;
         padding: 1rem 1.5rem 0.5rem;
     }
-    .bass .info{
+
+    .bass .info {
         inset: -80% auto auto -50%;
     }
-    .bass .info::after{
+
+    .bass .info::after {
         height: 40px;
     }
+
     .mic .info::before {
         width: 0px;
     }
-    .mic .info::after{
+
+    .mic .info::after {
         right: -0px;
         height: 70px;
     }
-    .eg .info::after{
+
+    .eg .info::after {
         height: 30px;
     }
 }
