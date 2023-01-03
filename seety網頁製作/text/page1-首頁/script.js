@@ -58,6 +58,23 @@ window.addEventListener('scroll', () => {
 
 
 // star move
+if (window.innerWidth <= 768) {
+  
+} else {
+  saturn.addEventListener('mousemove', e => {
+    let rotateDeg = e.clientX - saturn.offsetLeft - saturnObj.offsetLeft;
+    if (rotateDeg < 0) {
+      saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 - 45}deg);`
+    } else {
+      saturnObj.style = `transform: translateX(-50%) rotate(${-rotateDeg / 4 + 45}deg);`
+    }
+  })
+
+  saturn.addEventListener('mouseleave', () => {
+    saturnObj.style = `transform: translateX(-50%) rotate(0deg);`
+  })
+}
+
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 768) {
     return;
