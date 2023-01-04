@@ -145,6 +145,7 @@ nav .more {
   display: none;
   z-index: 3;
   position: relative;
+  user-select: none;
 }
 
 .back-to-top {

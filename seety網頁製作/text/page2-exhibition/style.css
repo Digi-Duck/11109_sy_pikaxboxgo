@@ -41,7 +41,6 @@ nav {
   justify-content: center;
   padding: 0 var(--web-side-padding-x);
   background-color: var(--main-bg-color);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -89,12 +88,10 @@ nav li {
   position: fixed;
   top: 9vh;
   right: 30px;
-  -webkit-animation: appear 0.7s ease-out forwards;
-          animation: appear 0.7s ease-out forwards;
+  animation: appear 0.7s ease-out forwards;
 }
 .back-to-top.appear .disappear {
-  -webkit-animation: disappear 0.2s linear forwards;
-          animation: disappear 0.2s linear forwards;
+  animation: disappear 0.2s linear forwards;
 }
 
 @media (max-width: 1366px) {
@@ -102,35 +99,8 @@ nav li {
     --web-side-padding-y: 40px;
     --web-side-padding-x: 100px;
   }
-  nav .list {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    flex-flow: column;
-    text-align: end;
-    background-color: var(--main-bg-color);
-    padding: 1rem 0.5rem 1rem 2rem;
-    z-index: 1;
-  }
-  nav li:not(.more) {
-    background-color: transparent;
-    background-image: url("../../img/01-header/nav-list-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 50%;
-    padding: 1rem;
-    font-size: 1.5rem;
-  }
   nav .list a {
     text-align: center;
-  }
-  nav .more {
-    display: block;
-  }
-  nav ul .list {
-    display: none;
   }
   nav ul .list.show {
     display: flex;
@@ -204,8 +174,7 @@ nav li {
   .block-all.show .image-area img {
     width: 100%;
     max-height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .block-all.show .content-area {
     justify-content: flex-start;
@@ -286,10 +255,8 @@ nav li {
 #render .render-zone .information-card .container .image-area img {
   width: 100%;
   max-height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  -o-object-position: center center;
-     object-position: center center;
+  object-fit: fill;
+  object-position: center center;
 }
 #render .render-zone .information-card .container .content-area {
   border-left: 1px dashed #92908e;
@@ -346,8 +313,7 @@ nav li {
   }
   #render .render-zone .information-card .container .image-area img {
     height: 100%;
-    -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
   }
   #render .render-zone .information-card .container .content-area {
     justify-content: flex-start;
@@ -401,33 +367,6 @@ nav li {
   }
 }
 
-@-webkit-keyframes appear {
-  0% {
-    transform: translateY(-100%);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25%);
-  }
-  60% {
-    transform: translateY(-33%);
-  }
-  70% {
-    transform: translateY(-25%);
-  }
-  80% {
-    transform: translateY(0);
-  }
-  90% {
-    transform: translateY(-10%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes appear {
   0% {
     transform: translateY(-100%);
@@ -454,14 +393,6 @@ nav li {
     transform: translateY(0);
   }
 }
-@-webkit-keyframes disappear {
-  20% {
-    transform: translateY(15%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
 @keyframes disappear {
   20% {
     transform: translateY(15%);
@@ -469,4 +400,4 @@ nav li {
   100% {
     transform: translateY(-100%);
   }
-}
+}/*# sourceMappingURL=style.css.map */
