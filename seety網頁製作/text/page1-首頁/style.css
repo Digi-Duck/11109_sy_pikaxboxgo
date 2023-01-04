@@ -301,6 +301,7 @@ main>section {
 #about-seety .container p {
   font-size: 2rem;
   line-height: 4rem;
+  text-align: center;
 }
 
 #about-seety .controller {
