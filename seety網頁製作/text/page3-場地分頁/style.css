@@ -23,6 +23,7 @@ body {
     perspective: 500px;
     overflow-x: hidden;
     position: relative;
+    background-color: #000;
 }
 
 nav {
@@ -101,8 +102,6 @@ nav button {
     height: 90vh;
     transform-style: preserve-3d;
     position: relative;
-    overflow: hidden;
-    background-color: #000;
 }
 
 .room .room-background {
@@ -238,7 +237,7 @@ nav button {
     background-color: var(--main-bg-color);
     color: var(--card-sub-color);
     position: absolute;
-    inset: -16% auto auto -10%;
+    inset: -10% auto auto -10%;
     padding: 5px 10px;
     border-radius: 0.5rem;
 }
@@ -306,7 +305,7 @@ nav button {
     background-color: var(--main-bg-color);
     color: var(--card-sub-color);
     position: absolute;
-    inset: -16% auto auto -10%;
+    inset: -10% auto auto -10%;
     padding: 5px 10px;
     border-radius: 0.5rem;
 }
@@ -322,6 +321,22 @@ nav button {
     outline-offset: 5px;
 }
 
+.inst-table {
+    padding: var(--web-side-padding-y) var(--web-side-padding-x);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    color: #fff;
+}
+
+.inst-table [class*="-text"] h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.inst-table [class*="-text"] p {
+    line-height: 1.5rem;
+}
 
 @media (max-width: 1366px) {
     :root {
@@ -432,9 +447,28 @@ nav button {
     }
 }
 
-@media(max-width:660px) {
+@media(max-width:768px) {
     :root {
         --web-side-padding-x: 32px;
+    }
+
+    .room {
+        height: 100%;
+    }
+
+    .room .info-content {
+        font-size: 12px;
+    }
+
+    .room div img {
+        opacity: 1;
+    }
+
+    .room div .info {
+        display: none;
+    }
+    .inst-table {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -442,4 +476,10 @@ nav button {
     .back-to-top {
         width: 100px;
     }
+
+    .inst-table {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 30%;
+    }
+
 }
