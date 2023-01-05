@@ -39,6 +39,14 @@ p {
   --card-sub-color: #eaeaea;
 }
 
+::selection {
+  background-color: var(--main-decorate-color);
+}
+
+::selection:is(img) {
+  background-color: transparent;
+}
+
 body {
   overflow-x: hidden;
   position: relative;
@@ -220,6 +228,7 @@ main>section {
   opacity: 0;
   filter: blur(4px);
   transition: all 0.8s ease;
+  user-select: none;
 }
 
 .title-fade-in {
@@ -258,6 +267,7 @@ main>section {
       100% 60%,
       100% 100%,
       0% 100%);
+  user-select: none;
 }
 
 #about-seety .about-info {
@@ -501,9 +511,10 @@ main>section {
   align-items: center;
 }
 
-#performance-information .swiper-slide a{
+#performance-information .swiper-slide a {
   text-align: end;
 }
+
 #performance-information .arrow {
   width: 15%;
   position: absolute;
@@ -554,6 +565,7 @@ main>section {
   z-index: 2;
   opacity: 1;
   transition: opacity 0.5s;
+  user-select: none;
 }
 
 #living-room .rooms .noshow {
