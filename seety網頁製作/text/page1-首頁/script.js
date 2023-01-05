@@ -147,7 +147,6 @@ listBar.addEventListener('click', () => {
 });
 navListTag.forEach(tag => {
   tag.addEventListener('click', () => {
-    console.log(1);
     list.classList.remove('show')
   })
 })

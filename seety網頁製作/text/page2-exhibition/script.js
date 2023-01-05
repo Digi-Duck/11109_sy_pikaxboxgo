@@ -13,7 +13,6 @@ const navListTag = document.querySelectorAll('nav .list a');
 
 navListTag.forEach((tag) => {
   tag.addEventListener('click', () => {
-    console.log(1);
     list.classList.remove('show');
   });
 });
@@ -50,7 +49,7 @@ const time = (time) => {
 const dataObj = async function () {
   const response = await fetch('./dev-data/data.json').then();
   const datas = await response.json();
-  console.log(datas);
+  // console.log(datas);
   renderContent = '';
 
   datas.forEach((data) => {
@@ -96,7 +95,7 @@ const dataObj = async function () {
       });
     });
   });
-  console.log(showArr);
+  // console.log(showArr);
 };
 
 dataObj();

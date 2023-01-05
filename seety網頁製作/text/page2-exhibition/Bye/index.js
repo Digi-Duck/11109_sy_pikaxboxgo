@@ -22,7 +22,7 @@ const dataObj = JSON.parse(data);
 
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
-  console.log(url.parse(req.url));
+  // console.log(url.parse(req.url));
 
   // Overview page
   if (pathname === '/' || pathname === '/overview') {
@@ -50,5 +50,5 @@ const server = http.createServer((req, res) => {
   }
 });
 server.listen(8001, '127.0.0.1', () => {
-  console.log('Listen to requests on port 8001');
+  // console.log('Listen to requests on port 8001');
 });
