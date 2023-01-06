@@ -789,6 +789,11 @@ main>section {
   height: 100%;
 }
 
+footer {
+  padding: 2rem var(--web-side-padding-x);
+  text-align: end;
+}
+
 @media (max-width: 1366px) {
   :root {
     --web-side-padding-y: 40px;
@@ -1222,6 +1227,10 @@ main>section {
 
     #contact-information .info {
       gap: 1rem;
+    }
+
+    #contact-information .icons {
+      gap: 0.5rem;
     }
   }
 
