@@ -59,7 +59,7 @@ window.addEventListener('scroll', () => {
 
 // star move
 if (window.innerWidth <= 768) {
-  
+
 } else {
   saturn.addEventListener('mousemove', e => {
     let rotateDeg = e.clientX - saturn.offsetLeft - saturnObj.offsetLeft;
@@ -104,15 +104,18 @@ window.addEventListener('resize', () => {
 // loading page
 const paths = document.querySelectorAll('#svgPic path')
 
+const html = document.querySelector('html')
+const loadingPage = document.querySelector('#svgPic')
+
 for (let i = 0; i < paths.length; i++) {
   let pL = paths[i].getTotalLength();
   paths[i].style.strokeDasharray = pL;
   paths[i].style.strokeDashoffset = pL;
 
   setTimeout(() => {
-    paths[i].style.transition = `stroke-dashoffset 1.5s linear ${1 * i}s ,
-        fill .5s linear ${1 * i}s
-        `
+    paths[i].style.transition = `stroke-dashoffset 1.5s linear ${0.5 * i}s ,
+          fill .5s linear ${0.5 * i}s
+          `
     paths[i].style.strokeDashoffset = pL + pL;
     setTimeout(() => {
       paths[i].setAttribute('fill', '#000')
@@ -120,8 +123,6 @@ for (let i = 0; i < paths.length; i++) {
   }, 100);
 }
 
-const html = document.querySelector('html')
-const loadingPage = document.querySelector('#svgPic')
 window.onload = () => {
   setTimeout(() => {
     loadingPage.classList.add('unshow')
@@ -133,9 +134,9 @@ window.onload = () => {
     setTimeout(() => {
       loadingPage.style.display = "none";
     }, 3000);
-  }, 8000);
-
+  }, 5000);
 }
+
 
 
 // nav toggle
